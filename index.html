@@ -5,12 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wonwoo (William) Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Centered big name */
+    .home-name {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .home-name h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    /* Two-column: text left, photo right */
+    .home-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .research-label {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .photo-col img {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 700px) {
+      .home-grid { grid-template-columns: 1fr; }
+      .home-name h1 { font-size: 2.2rem; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <a class="site-name" href="index.html">Wonwoo Kim</a>
+    <a class="site-name" href="index.html">Wonwoo (William) Kim</a>
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="cv.html">CV</a>
@@ -22,23 +62,25 @@
 </header>
 
 <main>
+
+  <!-- Big centered name -->
+  <div class="home-name">
+    <h1>Wonwoo (William) Kim</h1>
+  </div>
+
+  <!-- Two-column grid -->
   <div class="home-grid">
+
+    <!-- LEFT: research interests + rest -->
     <div class="home-body">
 
-      <!-- Name + subtitle -->
-      <h1>Wonwoo (William) Kim</h1>
-      <p class="subtitle">Student in Economics</p>
-
-      <!-- Spacer before paragraphs -->
-      <div style="margin-top: 2rem;">
-      <div class="contact-block">
-        <p>
-          My research seeks to understand how institutions translate individual intentions into socially beneficial outcomes. More specifically, I aim to study how incentive design in policy shapes behavior and welfare across health, labor, and political settings.
-        </p>
-        <p>
-          By conducting empirical analysis informed by microeconomic theory, my goal is to develop frameworks that clarify the mechanisms through which institutional arrangements operate and to apply these insights to evidence-based policy design.
-        </p>
-      </div>
+      <p class="research-label">Research interests:</p>
+      <p>
+        My research seeks to understand how institutions translate individual intentions into socially beneficial outcomes. More specifically, I aim to study how incentive design in policy shapes behavior and welfare across health, labor, and political settings.
+      </p>
+      <p style="margin-top:1rem;">
+        By conducting empirical analysis informed by microeconomic theory, my goal is to develop frameworks that clarify the mechanisms through which institutional arrangements operate and to apply these insights to evidence-based policy design.
+      </p>
 
 
       <div class="affiliation-block">
@@ -49,10 +91,11 @@
 
     </div>
 
-    <!-- Photo column -->
+    <!-- RIGHT: photo -->
     <div class="photo-col">
-      <img src="Wonwoo Kim.jpg" alt="Wonwoo Kim" style="width:180px; border: 1px solid var(--border);">
+      <img src="Wonwoo Kim.jpg" alt="Wonwoo Kim">
     </div>
+
   </div>
 </main>
 
