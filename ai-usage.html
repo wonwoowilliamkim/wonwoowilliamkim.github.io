@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How People Use ChatGPT and Claude — Wonwoo (William) Kim</title>
+  <meta name="description" content="Descriptive facts from OpenAI's and Anthropic's public usage data: what people use ChatGPT and Claude for, how it changed, and how closely the two line up across countries." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="site-name" href="index.html">Wonwoo (William) Kim</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <a class="back-link" href="data-notes.html">← Data Collection and Notes</a>
+
+  <h2 class="page-title">How People Use ChatGPT and Claude</h2>
+  <p class="note-dek">Data notes · October 2026</p>
+  <hr class="page-divider">
+
+  <p class="note-intro">
+    OpenAI (through OpenAI Signals) and Anthropic (through the Anthropic
+    Economic Index) now publish aggregate statistics on what people use their
+    chatbots for, by country and over time. I spent some time with both files.
+    These are the patterns that stood out. Everything here is descriptive: the
+    charts show what moved together, not why. The caveats that matter most are
+    collected at the end.
+  </p>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-num">24.0% → 13.5%</div>
+      <div class="stat-label">ChatGPT messages labelled schoolwork, Jul 2024 to Sep 2026</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">14 → 89</div>
+      <div class="stat-label">countries (of 126) where feminine-name users send most messages, 2024 Q3 vs 2026 Q2</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">74 of 74</div>
+      <div class="stat-label">countries where programming's share of work messages fell, 2025 Q1 to 2026 Q2</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">0.91</div>
+      <div class="stat-label">rank correlation of Claude and ChatGPT use per person, 121 countries</div>
+    </div>
+  </div>
+
+  <div class="note-toc" role="navigation" aria-label="Sections">
+    <a href="#what">What it is used for</a>
+    <a href="#calendar">Calendars in the data</a>
+    <a href="#places">Countries</a>
+    <a href="#platforms">Claude and ChatGPT</a>
+    <a href="#caveats">Data and caveats</a>
+  </div>
+
+  <!-- ── 1. What it is used for ── -->
+  <h3 class="note-section" id="what">What it is used for</h3>
+
+  <div class="fact">
+    <div class="fact-title">Less work, less homework, more everything else</div>
+    <p class="fact-text">
+      In July 2024, 51.6% of ChatGPT messages were labelled work-related. By
+      September 2026 it was 32.2%. A second, three-way label (work, schoolwork,
+      other) shows where it went. Work fell from 27.3% to about 19% by the end
+      of 2024 and has stayed near there since (21.0% in September 2026).
+      Schoolwork kept falling, from 24.0% to 13.5%. Everything else, mostly
+      personal use, grew from 48.7% to 65.5%.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c01_work_school_other.png" width="1600" height="900"
+           alt="Line chart of monthly shares of ChatGPT messages, July 2024 to September 2026. Schoolwork falls from 24% to 14%, work from 27% to 21%, and other use rises from 49% to 66%; a dashed line for the yes/no work-related label falls from 51.6% to 32.2%." />
+    </figure>
+  </div>
+
+  <div class="fact">
+    <div class="fact-title">People talk to it more and ask it to do things less</div>
+    <p class="fact-text">
+      Signals sorts each message into asking (looking for information or
+      advice), doing (getting a task done, such as writing or code), or
+      expressing (sharing feelings or opinions). Expressing went from 11.7% to
+      29.1% of messages. Doing fell from 42.7% to 33.9%, and asking from 45.7%
+      to 36.9%.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c02_ask_do_express.png" width="1600" height="900" loading="lazy" decoding="async"
+           alt="Line chart of monthly shares of ChatGPT messages by intent. Expressing (sharing feelings or opinions) rises from 11.7% to 29.1%, while doing falls from 42.7% to 33.9% and asking from 45.7% to 36.9%." />
+    </figure>
+  </div>
+
+  <div class="fact">
+    <div class="fact-title">Women now send most of the messages, and the share rose everywhere</div>
+    <p class="fact-text">
+      The share of messages from users with typically feminine first names rose
+      from 42% to 52%. It first reached 50% in May 2025 and has stayed above it
+      since September 2025. The rise is not driven by a few large countries: the
+      share went up in all 126 countries observed throughout, and the number of
+      countries above 50% went from 14 to 89. Gender here is inferred from first
+      names, not reported by users.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c03_feminine_share.png" width="1600" height="900" loading="lazy" decoding="async"
+           alt="Left: the share of ChatGPT messages sent from feminine first names rises from 42% in July 2024 to 52% in September 2026, first passing 50% in May 2025. Right: the number of countries (of 126) where that share is above 50% rises from 14 in July 2024 to about 90 in 2026 (89 on the April-June 2026 average)." />
+    </figure>
+  </div>
+
+  <div class="fact">
+    <div class="fact-title">Programming fell in every country</div>
+    <p class="fact-text">
+      Signals also labels each work message with an O*NET work activity. Across
+      the 74 countries observed in every quarter, the median share of work
+      messages about programming fell from 7.6% (2025 Q1) to 2.9% (2026 Q2),
+      and it fell in all 74. Creating visual designs moved the other way, from
+      3.0% to 6.4%, rising in 73 of 74. One reading is that coding moved to
+      dedicated tools (Codex, Claude Code, Cursor) that these files do not
+      cover. The data cannot show who moved.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c05_task_shifts.png" width="1600" height="1000" loading="lazy" decoding="async"
+           alt="Dumbbell chart of ten work tasks whose median share of ChatGPT work messages changed most between 2025 Q1 and 2026 Q2. Programming falls from 7.6% to 2.9% and fell in 74 of 74 countries, while creating visual designs rises from 3.0% to 6.4% and rose in 73 of 74." />
+    </figure>
+  </div>
+
+  <!-- ── 2. Calendars ── -->
+  <h3 class="note-section" id="calendar">Calendars in the data</h3>
+
+  <div class="fact">
+    <div class="fact-title">The southern summer holiday shows up in December and January</div>
+    <p class="fact-text">
+      Relative to each country's own trend, the work share in seven
+      southern-hemisphere countries drops by about 11% in December and 9% in
+      January, their summer break. Northern countries show small dips in June
+      and August and a rise in September and October. Summer holidays mix
+      school and work leave, so this cannot tell the two apart.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c08_southern_summer_dip.png" width="1600" height="900" loading="lazy" decoding="async"
+           alt="Line chart of ChatGPT's work-related share relative to each country's own trend, by calendar month. In seven southern-hemisphere countries the median falls to about -11% in December and -9% in January, while in 47 northern countries it dips mildly in June and August and peaks in September and October." />
+    </figure>
+  </div>
+
+  <div class="fact">
+    <div class="fact-title">So does Lunar New Year</div>
+    <p class="fact-text">
+      In South Korea, Vietnam, Taiwan and Singapore, the work share is lower
+      in whichever month holds Lunar New Year (January in 2025, February in
+      2026), compared with 141 other countries: by 3.2 percentage points on
+      average. Random groups of four countries rarely show a gap that large
+      (p = 0.001). Most of it comes from February 2026; the 2025 holiday
+      straddled the two months.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c09_lunar_new_year.png" width="1600" height="900" loading="lazy" decoding="async"
+           alt="Dot chart of the work-related share in South Korea, Vietnam, Taiwan and Singapore relative to 141 other countries, in January and February of 2025 and 2026. In the Lunar New Year month the gap is smaller (January 2025 versus 2026 by -0.7 points, February by -5.7), an average of -3.2 percentage points." />
+    </figure>
+  </div>
+
+  <!-- ── 3. Countries ── -->
+  <h3 class="note-section" id="places">Countries</h3>
+
+  <div class="fact">
+    <div class="fact-title">Korea and Japan climbed the per-capita ranking fast</div>
+    <p class="fact-text">
+      Between 2025 Q1 and 2026 Q3, South Korea moved from 67th to 24th in
+      ChatGPT use per person, and Japan from 113th to 62nd. Japan's 51-place
+      climb was the second largest of any country, after Azerbaijan (85), and
+      Korea's 43 the third. Taiwan went the other way, from 48th to 67th, and
+      the US moved from 40th to 49th.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c11_per_capita_rank.png" width="1600" height="900" loading="lazy" decoding="async"
+           alt="Line chart of per-capita ChatGPT usage rank by quarter, 2025 Q1 to 2026 Q3, with the axis flipped so up means more use. South Korea climbs from 67 to 24 and Japan from 113 to 62, while Taiwan falls from 48 to 67 and the United States stays between 40 and 58." />
+    </figure>
+  </div>
+
+  <div class="fact">
+    <div class="fact-title">Searching for ChatGPT is not using ChatGPT</div>
+    <p class="fact-text">
+      Google search interest in ChatGPT is higher in poorer countries (rank
+      correlation with GDP per person −0.52, 94 countries). Actual use per
+      person runs the other way (+0.90, 165 countries). Search interest is
+      relative to all searches in a country, so it partly measures novelty.
+      Changes in search interest do track changes in use, but its levels are a
+      poor stand-in for adoption.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c13_search_vs_use.png" width="1600" height="900" loading="lazy" decoding="async"
+           alt="Two scatter plots against GDP per person. Left: Google Trends search interest in ChatGPT is lower in richer countries (rank correlation -0.52). Right: actual per-capita ChatGPT use from OpenAI Signals is higher in richer countries (rank correlation +0.90)." />
+      <figcaption>Data source: Google Trends (https://www.google.com/trends); OpenAI Signals v3.0; World Bank WDI.</figcaption>
+    </figure>
+  </div>
+
+  <div class="fact">
+    <div class="fact-title">Where women hold more political power, more of the messages come from women</div>
+    <p class="fact-text">
+      Across 127 countries, the share of ChatGPT messages from users with
+      feminine first names (April to June 2026) is higher where women hold more
+      political power, as measured by V-Dem's women's political empowerment
+      index: rank correlation +0.47, and +0.38 after accounting for GDP per
+      person (about the same within world regions). Part of it overlaps with
+      older user bases: holding the average user age fixed as well, it is
+      +0.27. Afghanistan has the lowest score on the index, and about 30% of
+      its messages come from feminine-name users. Women's labour force
+      participation shows no clear link (−0.14 after GDP, not significant), so
+      the pattern does not simply follow women's paid work.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c21_women_empowerment_feminine_share.png" width="1600" height="940" loading="lazy" decoding="async"
+           alt="Scatter of 127 countries: where women hold more political power (V-Dem index), a larger share of ChatGPT messages comes from users with feminine names (rank correlation +0.47, +0.38 after GDP per person). Afghanistan has the lowest index score and a feminine share of about 30%; Moldova and Jamaica are among the highest on both." />
+    </figure>
+  </div>
+
+  <!-- ── 4. Claude and ChatGPT ── -->
+  <h3 class="note-section" id="platforms">Claude and ChatGPT</h3>
+
+  <div class="fact">
+    <div class="fact-title">The same countries use both</div>
+    <p class="fact-text">
+      Across 121 countries, Claude use per person and ChatGPT use per person
+      line up closely (rank correlation 0.91). Relative to their ChatGPT
+      position, the US (+33 percentile points), Italy (+28), New Zealand (+26),
+      Taiwan (+23) and Japan (+21) lean toward Claude. Azerbaijan is the
+      largest outlier the other way (−69).
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c15_claude_vs_chatgpt_adoption.png" width="1600" height="940" loading="lazy" decoding="async"
+           alt="Scatter of 121 countries with ChatGPT's per-capita usage percentile on one axis and Claude's usage-per-person percentile on the other; the two line up closely (rank correlation 0.91). The US, Italy, New Zealand, Taiwan and Japan sit relatively higher on Claude, while Azerbaijan sits relatively higher on ChatGPT." />
+    </figure>
+  </div>
+
+  <div class="fact">
+    <div class="fact-title">Claude follows press freedom more than ChatGPT does</div>
+    <p class="fact-text">
+      Claude use per working-age person is higher in countries with a freer
+      press: rank correlation +0.61 across 117 countries (Reporters Without
+      Borders index), and +0.54 after accounting for GDP per person. It holds
+      within the high and upper-middle income groups. Lower corruption (+0.49)
+      and higher PISA scores (+0.46) point the same way after GDP. These
+      measures are correlated with one another (about +0.6 to +0.8), so read
+      them as one broad pattern. ChatGPT use also rises with press freedom, but
+      much less: on the same 110 countries it is +0.21 after GDP, against
+      +0.54 for Claude (the 95% interval for the gap runs from 0.14 to 0.50).
+      Claude.ai is not offered in some countries, but none of them are in this
+      sample, so availability does not explain it. Singapore is the clear
+      exception: among the highest Claude use, with a low press-freedom score.
+    </p>
+    <figure class="fact-fig">
+      <img src="assets/ai-usage/c20_claude_press_freedom.png" width="1600" height="980" loading="lazy" decoding="async"
+           alt="Scatter of 117 countries: Claude use per person is higher where the press is freer (rank correlation +0.61, +0.54 after GDP per person). Points are shaded by income group, and the pattern holds within the high and upper-middle income groups. Singapore is the clear exception: among the highest Claude use with a low press-freedom score." />
+    </figure>
+  </div>
+
+  <!-- ── 5. Data and caveats ── -->
+  <h3 class="note-section" id="caveats">Data and caveats</h3>
+
+  <ul class="fact-text note-list">
+    <li><strong>Shares, not counts.</strong> Signals publishes shares of
+      messages and per-capita ranks, never message volumes. A falling share can
+      mean less of one thing or more of everything else.</li>
+    <li><strong>Consumer ChatGPT and Claude.ai only.</strong> Signals covers
+      consumer ChatGPT plans, and the Anthropic country files cover Claude.ai
+      conversations. Claude Code and Codex are in neither.</li>
+    <li><strong>Labels come from classifiers.</strong> Work, intent and
+      activity labels are assigned by language models, and Signals adds
+      differential-privacy noise, which matters most for small countries and
+      small categories.</li>
+    <li><strong>Gender is inferred from first names</strong>, not reported by
+      users.</li>
+    <li><strong>Per-capita ranks are fragile at the top.</strong> Places with
+      fewer than 100,000 working-age residents (Seychelles, Monaco, American
+      Samoa) have each ranked first in some quarter.</li>
+    <li><strong>Nothing here is causal.</strong> Every pattern is a
+      correlation in aggregate data.</li>
+    <li><strong>The two governance comparisons were set up in advance.</strong>
+      Press freedom and women's political power were among 16 cross-country
+      comparisons I wrote down before computing any of them. Both pass a
+      correction for testing many comparisons at once. The ChatGPT comparison
+      and the user-age check in those two sections were added afterwards.</li>
+    <li>All numbers are my own calculations from the public files, and any
+      errors are mine.</li>
+  </ul>
+
+  <p class="fact-text">
+    More data: OpenAI's own
+    <a href="https://openai.com/signals/data/">Signals page</a> shows many more
+    series interactively, including breakdowns by country, age group, plan and
+    US state.
+  </p>
+
+  <p class="note-small">
+    <strong>OpenAI Signals.</strong> Chatterji, Cunningham, Deming, Hitzig,
+    Johnston, Martin Richmond, Ong, Shan and Wadman (2026), OpenAI Signals
+    v3.0, OpenAI, <a href="https://openai.com/signals/data-download/">openai.com/signals/data-download</a>.
+    Licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; the
+    charts and derived numbers are mine.
+  </p>
+  <p class="note-small">
+    <strong>Anthropic Economic Index.</strong> Country-level Claude.ai data from
+    the June 2026 release,
+    <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex">huggingface.co/datasets/Anthropic/EconomicIndex</a>.
+    Data released under CC-BY.
+  </p>
+  <p class="note-small">
+    <strong>Google Trends.</strong> Data source: Google Trends
+    (<a href="https://www.google.com/trends">https://www.google.com/trends</a>).
+  </p>
+  <p class="note-small">
+    <strong>O*NET.</strong> This page includes information from the O*NET 31.0
+    Database by the U.S. Department of Labor, Employment and Training
+    Administration (USDOL/ETA). Used under the
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+    license. O*NET® is a trademark of USDOL/ETA. Wonwoo (William) Kim has
+    modified all or some of this information. USDOL/ETA has not approved,
+    endorsed, or tested these modifications.
+  </p>
+  <p class="note-small">
+    <strong>Quality of Government.</strong> Press freedom (Reporters Without
+    Borders, World Press Freedom Index), women's political empowerment (V-Dem)
+    and corruption (Transparency International, Corruption Perceptions Index),
+    all as included in
+    Teorell, Sundström, Holmberg, Rothstein, Alvarado Pachon, Saidi Phiri, Chen
+    and Liu (2026), The Quality of Government Standard Dataset, version Jan26,
+    University of Gothenburg: The Quality of Government Institute,
+    <a href="https://doi.org/10.18157/qogstdjan26">doi:10.18157/qogstdjan26</a>.
+  </p>
+  <p class="note-small">
+    <strong>Other sources.</strong> World Bank, World Development Indicators
+    (GDP per person, PPP) and income groups. OECD (2023), PISA 2022 Results
+    (Volume I): The State of Learning and Equity in Education, OECD
+    Publishing, Paris.
+  </p>
+</main>
+
+</body>
+</html>

@@ -645,8 +645,137 @@ h1 {
   padding: 2.5rem 0;
 }
 
+/* ── AI USAGE NOTES ── */
+.hub-panel--wide { grid-column: 1 / -1; min-height: 0; }
+
+.note-dek {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.note-intro {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem 1.1rem;
+}
+
+.stat-num {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.stat-label {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+.note-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.3rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+
+.note-toc a { text-decoration: none; }
+.note-toc a:hover { text-decoration: underline; }
+
+.note-section {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+  margin: 3rem 0 1.6rem;
+}
+
+.fact { margin-bottom: 2.8rem; }
+
+.fact-title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 0.45rem;
+}
+
+.fact-text {
+  font-size: 0.98rem;
+  color: #333;
+  margin-bottom: 0.9rem;
+}
+
+.fact-tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b05c00;
+  background: #fff3e0;
+  padding: 0.1rem 0.45rem;
+  margin-left: 0.35rem;
+  vertical-align: 0.2em;
+}
+
+.fact-fig {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+}
+
+.fact-fig img { display: block; width: 100%; height: auto; }
+
+.fact-fig figcaption {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.note-small {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+.note-small li { margin: 0 0 0.45rem 1.1rem; }
+.note-small + .note-small { margin-top: 0.6rem; }
+
+.note-list { padding-left: 1.2rem; margin-bottom: 1.6rem; }
+.note-list li { margin-bottom: 0.35rem; }
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
+  .stat-row { grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+  .stat { padding: 0.8rem 0.85rem; }
+  .stat-num { font-size: 1.2rem; }
   .home-grid { grid-template-columns: 1fr; }
   .cv-entry { grid-template-columns: 90px 1fr; }
   .contact-grid { grid-template-columns: 1fr; }

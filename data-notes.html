@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Collection and Notes — Wonwoo (William) Kim</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-card {
+      border: 1px solid var(--border);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      background: var(--surface);
+      transition: border-color 0.2s;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem 2rem;
+      align-items: start;
+    }
+    .project-card:hover { border-color: var(--accent); }
+
+    .project-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .project-meta {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.9rem;
+      align-items: center;
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.55rem;
+      border-radius: 2px;
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .project-stats {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .stat-item strong {
+      font-size: 1.1rem;
+      color: var(--text);
+      font-family: var(--serif);
+      font-weight: 400;
+      display: block;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.42rem 0.9rem;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s;
+    }
+    .project-link:hover { background: var(--accent); color: #fff; }
+    .project-link.secondary {
+      border-color: var(--border);
+      color: var(--muted);
+    }
+    .project-link.secondary:hover { background: var(--accent-light); color: var(--accent); }
+
+    .project-visual {
+      width: 120px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .node-preview {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border: 1px solid var(--border);
+      background: #0b0d14;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .node-preview svg { width: 72px; height: 72px; }
+
+    @media (max-width: 640px) {
+      .project-card { grid-template-columns: 1fr; }
+      .project-visual { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="site-name" href="index.html">Wonwoo (William) Kim</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <a class="back-link" href="projects.html">← Projects</a>
+  <h2 class="page-title">Data Collection and Notes</h2>
+  <hr class="page-divider">
+
+  <p style="font-size:0.95rem;color:#444;margin-bottom:2.5rem;line-height:1.75;">
+    Notes and charts built from public data I have collected and cleaned. Each
+    entry lists its sources and what the data can and cannot show. Replication
+    packages and further notes will be added here over time.
+  </p>
+
+  <!-- ── Note 1: How people use ChatGPT and Claude ── -->
+  <div class="project-card">
+    <div>
+      <div class="project-title">How People Use ChatGPT and Claude</div>
+      <div class="project-meta">
+        <span class="project-tag">OpenAI Signals</span>
+        <span class="project-tag">Anthropic Economic Index</span>
+        <span>Descriptive notes · Oct 2026</span>
+      </div>
+
+      <p class="project-desc">
+        Eleven descriptive facts from OpenAI's and Anthropic's public usage data:
+        less work and more personal use, women now sending most messages,
+        programming falling in every country, holiday calendars showing up in
+        the data, how closely Claude and ChatGPT use line up across countries,
+        and how they relate to press freedom and women's political power.
+      </p>
+
+      <div class="project-stats">
+        <div class="stat-item"><strong>11</strong>charts</div>
+        <div class="stat-item"><strong>27</strong>months of data</div>
+        <div class="stat-item"><strong>7</strong>public data sources</div>
+      </div>
+
+      <div class="project-links">
+        <a class="project-link" href="ai-usage.html">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          Read Notes
+        </a>
+        <a class="project-link secondary" href="ai-usage.html#caveats">
+          Data and Caveats
+        </a>
+      </div>
+    </div>
+
+    <div class="project-visual">
+      <div class="node-preview">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="12" y1="58" x2="62" y2="58" stroke="#4C9BE8" stroke-width="1" stroke-opacity="0.4"/>
+          <polyline points="12,22 22,26 32,30 42,38 52,44 62,50" stroke="#4C9BE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="12,46 22,44 32,40 42,34 52,30 62,26" stroke="#E85C4C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="12,40 22,40 32,38 42,40 52,39 62,40" stroke="#48BB78" stroke-width="1.4" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="62" cy="50" r="2.5" fill="#4C9BE8"/>
+          <circle cx="62" cy="26" r="2.5" fill="#E85C4C"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>
