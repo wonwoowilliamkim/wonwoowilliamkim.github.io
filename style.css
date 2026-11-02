@@ -781,5 +781,30 @@ h1 {
   .contact-grid { grid-template-columns: 1fr; }
   .hub-grid { grid-template-columns: 1fr; }
   .hub-panel { min-height: 0; }
-  nav a { padding: 0 0.7rem; font-size: 0.75rem; }
+
+  /* Header: name on its own line, nav below it. On very narrow screens
+     the nav scrolls sideways instead of widening the whole page. */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 0.55rem 1.25rem 0;
+  }
+  .site-name { white-space: nowrap; }
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    flex-shrink: 0;
+    height: 40px;
+    padding: 0 0.3rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+  }
+  nav a:first-child { padding-left: 0; }
+  nav a:last-child { padding-right: 0; }
 }
