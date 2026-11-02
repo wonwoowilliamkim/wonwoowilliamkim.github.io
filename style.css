@@ -782,29 +782,26 @@ h1 {
   .hub-grid { grid-template-columns: 1fr; }
   .hub-panel { min-height: 0; }
 
-  /* Header: name on its own line, nav below it. On very narrow screens
-     the nav scrolls sideways instead of widening the whole page. */
+  /* Header: name on its own line, nav below it as a 3 x 2 grid so the
+     links get room. The taller header stops being sticky on phones so
+     it does not eat the reading area while scrolling. */
+  header { position: static; }
   .header-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     height: auto;
-    padding: 0.55rem 1.25rem 0;
+    padding: 0.7rem 1.25rem 0.2rem;
   }
-  .site-name { white-space: nowrap; }
+  .site-name { white-space: nowrap; margin-bottom: 0.15rem; }
   nav {
-    width: 100%;
-    justify-content: space-between;
-    overflow-x: auto;
-    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
   }
-  nav::-webkit-scrollbar { display: none; }
   nav a {
-    flex-shrink: 0;
-    height: 40px;
-    padding: 0 0.3rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.03em;
+    justify-self: start;
+    height: 36px;
+    padding: 0;
+    font-size: 0.75rem;
   }
-  nav a:first-child { padding-left: 0; }
-  nav a:last-child { padding-right: 0; }
 }
