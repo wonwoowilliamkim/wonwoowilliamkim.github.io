@@ -1,0 +1,3796 @@
+{
+  "nodes": [
+    {
+      "id": "f_sup",
+      "label": "Supervised Prediction",
+      "type": "topic",
+      "color": "#4C9BE8",
+      "description": "Learning a mapping from features to an outcome. In economics these methods mostly serve as flexible nuisance estimators inside causal designs, or answer prediction policy problems directly.\n"
+    },
+    {
+      "id": "m_dt",
+      "label": "Decision Trees (CART)",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: split the data recursively on the feature that most reduces impurity (Gini or entropy), then prune to control overfitting. Econ use: causal trees replace impurity with treatment-effect heterogeneity and use honest sample splitting to find interpretable subgroups.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_knn",
+      "label": "k-Nearest Neighbors",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: predict with the labels of the k closest training points. Econ use: nearest-neighbor matching estimators of treatment effects, whose bias shrinks slowly when several covariates are continuous.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_nb",
+      "label": "Naive Bayes",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: a Bayes classifier that treats features as independent given the class. Econ use: classifying text such as policy documents, news and speeches into categories for measurement.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_svm",
+      "label": "Support Vector Machines and Kernels",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: maximize the margin between classes, with kernels for nonlinear boundaries. Econ use: the kernel idea carries over to kernel instrumental-variable regression and kernel balancing weights.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_lasso",
+      "label": "Lasso, Ridge and Elastic Net",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: penalized regression that shrinks and selects coefficients. Econ use: post-double-selection for inference with many controls, and lasso first stages for optimal instruments.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "m_rf",
+      "label": "Bagging and Random Forests",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: average many trees grown on resampled data. Econ use: flexible nuisance estimation, and the backbone of causal forests.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "m_gb",
+      "label": "Gradient Boosting",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: add trees one at a time, each fitting the errors left by the previous ones. Econ use: prediction policy problems, such as comparing algorithmic and judicial bail decisions, and nuisance estimation.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "m_gp",
+      "label": "Gaussian Processes and Bayesian Nonparametrics",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: put a prior directly on the unknown function. Econ use: flexible conditional-mean estimation, for example around a regression-discontinuity cutoff.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "m_dnn",
+      "label": "Deep Neural Networks",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L2 Deep learning",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: stacked nonlinear layers that approximate complex functions. Econ use: first-step estimation in semiparametric models, with valid second-step inference.\n",
+      "level": "L2 · Deep learning"
+    },
+    {
+      "id": "m_tabpfn",
+      "label": "Tabular Foundation Models (TabPFN)",
+      "type": "subtopic",
+      "color": "#4C9BE8",
+      "parent": "f_sup",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: early"
+      ],
+      "description": "CS idea: a transformer pretrained on synthetic tasks predicts on a new small table in context, without task-specific training. Econ use: early; being benchmarked as a learner for conditional effects and nuisance functions.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "f_uns",
+      "label": "Unsupervised Learning and Representation",
+      "type": "topic",
+      "color": "#9F7AEA",
+      "description": "Finding structure without an outcome variable: clusters, factors, low-rank structure and compressed representations. In economics these become latent types, factor models and imputation tools for panels.\n"
+    },
+    {
+      "id": "m_dist",
+      "label": "Similarity and Distance Measures",
+      "type": "subtopic",
+      "color": "#9F7AEA",
+      "parent": "f_uns",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: define how close two objects are (Jaccard, cosine, Mahalanobis). Econ use: Mahalanobis matching, and text-similarity measures of product-market competitors.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_km",
+      "label": "K-Means Clustering",
+      "type": "subtopic",
+      "color": "#9F7AEA",
+      "parent": "f_uns",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: partition units into k groups that minimize within-group squared error. Econ use: grouped fixed-effects estimators that discretize unobserved heterogeneity in panel data.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_hc",
+      "label": "Hierarchical Clustering",
+      "type": "subtopic",
+      "color": "#9F7AEA",
+      "parent": "f_uns",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: early"
+      ],
+      "description": "CS idea: build a tree of nested clusters (a dendrogram). Econ use: building industry or occupation taxonomies and market definitions.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_dbscan",
+      "label": "Density-Based Clustering (DBSCAN)",
+      "type": "subtopic",
+      "color": "#9F7AEA",
+      "parent": "f_uns",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: early"
+      ],
+      "description": "CS idea: clusters are dense regions of any shape, separated by sparse ones. Econ use: mostly descriptive, for example locating spatial clusters of firms or settlements.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_pca",
+      "label": "Principal Component Analysis",
+      "type": "subtopic",
+      "color": "#9F7AEA",
+      "parent": "f_uns",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: project data onto the directions of largest variance. Econ use: factor models and interactive fixed effects, and asset-based wealth indices.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_mix",
+      "label": "Finite Mixtures and EM",
+      "type": "subtopic",
+      "color": "#9F7AEA",
+      "parent": "f_uns",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: model data as a mixture of latent classes and fit it with the EM algorithm. Econ use: unobserved types in structural and dynamic discrete-choice models.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "m_mc",
+      "label": "Matrix Completion",
+      "type": "subtopic",
+      "color": "#9F7AEA",
+      "parent": "f_uns",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: fill in missing matrix entries under a low-rank assumption. Econ use: imputing untreated potential outcomes in causal panel data, including staggered adoption.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "m_ae",
+      "label": "Autoencoders and Representation Learning",
+      "type": "subtopic",
+      "color": "#9F7AEA",
+      "parent": "f_uns",
+      "key_concepts": [
+        "Level: L2 Deep learning",
+        "Econ adoption: early"
+      ],
+      "description": "CS idea: learn a compressed representation of high-dimensional inputs. Econ use: early; turning images or text into low-dimensional controls.\n",
+      "level": "L2 · Deep learning"
+    },
+    {
+      "id": "f_eval",
+      "label": "Evaluation and Uncertainty",
+      "type": "topic",
+      "color": "#F6AD55",
+      "description": "How to measure out-of-sample performance and quantify uncertainty. Several course staples (cross-validation, bootstrap, cost matrices) reappear in econometrics as cross-fitting, inference tools and welfare-based treatment choice.\n"
+    },
+    {
+      "id": "m_cv",
+      "label": "Cross-Validation and Holdout",
+      "type": "subtopic",
+      "color": "#F6AD55",
+      "parent": "f_eval",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: estimate out-of-sample error on held-out data. Econ use: becomes cross-fitting in double/debiased machine learning, which removes overfitting bias from nuisance estimates.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_boot",
+      "label": "Bootstrap",
+      "type": "subtopic",
+      "color": "#F6AD55",
+      "parent": "f_eval",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: standard"
+      ],
+      "description": "CS idea: resample the data with replacement to approximate a sampling distribution. Econ use: standard errors, and current work on bootstrap inference when regressors are labels generated by AI or ML.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_cost",
+      "label": "Cost-Sensitive Classification",
+      "type": "subtopic",
+      "color": "#F6AD55",
+      "parent": "f_eval",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: misclassification costs differ by error type (a cost matrix). Econ use: the same logic underlies empirical welfare maximization, which chooses whom to treat.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_roc",
+      "label": "ROC and Lift Curves",
+      "type": "subtopic",
+      "color": "#F6AD55",
+      "parent": "f_eval",
+      "key_concepts": [
+        "Level: L0 Foundations",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: trace true- and false-positive rates as the threshold moves. Econ use: rank-weighted average treatment effects (RATE) evaluate rules that prioritize who gets treated.\n",
+      "level": "L0 · Foundations"
+    },
+    {
+      "id": "m_gml",
+      "label": "Generic ML Inference on Heterogeneity",
+      "type": "subtopic",
+      "color": "#F6AD55",
+      "parent": "f_eval",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: growing"
+      ],
+      "description": "Origin: econometrics. Uses any ML proxy of heterogeneity to test for it and report best linear predictors (BLP), sorted group average effects (GATES) and the characteristics of the most and least affected units (CLAN).\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_conf",
+      "label": "Conformal Prediction",
+      "type": "subtopic",
+      "color": "#F6AD55",
+      "parent": "f_eval",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: prediction intervals with finite-sample coverage under exchangeability, without a parametric model. Econ use: intervals for counterfactuals, individual treatment effects and synthetic controls.\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_ppi",
+      "label": "Prediction-Powered Inference",
+      "type": "subtopic",
+      "color": "#F6AD55",
+      "parent": "f_eval",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: combine many ML predictions with a small set of true labels to get valid confidence intervals. Econ use: inference when outcomes or regressors are generated by ML models or LLMs.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "f_causal",
+      "label": "Causal Machine Learning",
+      "type": "topic",
+      "color": "#E85C4C",
+      "description": "Machine learning adapted to estimate causal parameters: average and heterogeneous treatment effects, optimal treatment rules, and identification under unmeasured confounding. Much of this family was developed by econometricians.\n"
+    },
+    {
+      "id": "m_deepiv",
+      "label": "Deep IV",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L2 Deep learning",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: neural networks for nonparametric instrumental-variable regression. Econ use: flexible demand estimation and counterfactual prediction.\n",
+      "level": "L2 · Deep learning"
+    },
+    {
+      "id": "m_meta",
+      "label": "Meta-Learners (S, T, X)",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: standard"
+      ],
+      "description": "Recipes that turn any supervised learner into an estimator of the conditional average treatment effect (CATE).\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_rdr",
+      "label": "R-Learner and DR-Learner",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: standard"
+      ],
+      "description": "CATE estimators built on residualized or doubly robust pseudo-outcomes, with oracle-type error guarantees.\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_dml",
+      "label": "Double/Debiased Machine Learning",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: standard"
+      ],
+      "description": "Origin: econometrics. Neyman-orthogonal scores and cross-fitting give root-n inference on low-dimensional parameters when nuisance functions are estimated by machine learning.\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_cf",
+      "label": "Causal Forests and Generalized Random Forests",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: standard"
+      ],
+      "description": "Forests of honest trees that estimate heterogeneous treatment effects with valid pointwise inference; widely applied to field experiments.\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_pl",
+      "label": "Policy Learning",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: growing"
+      ],
+      "description": "Learn a treatment assignment rule that maximizes estimated welfare, from experimental or observational data, with regret guarantees.\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_sens",
+      "label": "Sensitivity Analysis for Causal ML",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: growing"
+      ],
+      "description": "Bounds on how much omitted confounding could move a causal machine-learning estimate.\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_prox",
+      "label": "Proximal Causal Inference",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: early"
+      ],
+      "description": "Identification under unmeasured confounding using two kinds of proxies (treatment-side and outcome-side negative controls).\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_disc",
+      "label": "Causal Discovery",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L3 Causal ML",
+        "Econ adoption: early"
+      ],
+      "description": "Learn a causal graph (DAG) from data, for example by continuous optimization (NOTEARS). Little used in economics, which relies on design-based identification.\n",
+      "level": "L3 · Causal ML"
+    },
+    {
+      "id": "m_hyp",
+      "label": "ML for Hypothesis Generation",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: growing"
+      ],
+      "description": "Use what a predictive model has learned to generate new, interpretable hypotheses for people to test.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "m_cpfn",
+      "label": "Causal Foundation Models",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: early"
+      ],
+      "description": "Transformers trained on simulated data-generating processes output treatment effect estimates for a new dataset in context.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "m_crl",
+      "label": "Causal Representation Learning",
+      "type": "subtopic",
+      "color": "#E85C4C",
+      "parent": "f_causal",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: early"
+      ],
+      "description": "Learn the latent causal variables themselves from raw, high-dimensional data.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "f_seq",
+      "label": "Sequential Decision-Making",
+      "type": "topic",
+      "color": "#38B2AC",
+      "description": "Choosing actions over time and learning from the outcomes: bandits, reinforcement learning and multi-stage treatment rules. Economists use them for adaptive experiments, policy evaluation and dynamic structural models.\n"
+    },
+    {
+      "id": "m_bandit",
+      "label": "Bandits and Adaptive Experiments",
+      "type": "subtopic",
+      "color": "#38B2AC",
+      "parent": "f_seq",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: balance exploring options and exploiting the best one. Econ use: adaptive experiments for policy choice, and inference after adaptive data collection.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "m_ope",
+      "label": "Off-Policy Evaluation",
+      "type": "subtopic",
+      "color": "#38B2AC",
+      "parent": "f_seq",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: evaluate a new decision policy using logs generated by an old one, often with doubly robust estimators. Econ use: the same problem as evaluating a counterfactual program.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "m_rl",
+      "label": "Reinforcement Learning",
+      "type": "subtopic",
+      "color": "#38B2AC",
+      "parent": "f_seq",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: learn a policy that maximizes long-run reward. Econ use: links to dynamic discrete choice; game-playing AI viewed as structural estimation.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "m_dtr",
+      "label": "Dynamic Treatment Regimes",
+      "type": "subtopic",
+      "color": "#38B2AC",
+      "parent": "f_seq",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: growing"
+      ],
+      "description": "Origin: biostatistics. Multi-stage treatment rules; recent econometrics extends empirical welfare maximization to dynamic regimes.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "f_strat",
+      "label": "Strategic and Multi-Agent Learning",
+      "type": "topic",
+      "color": "#ED64A6",
+      "description": "Learning when the people being scored or allocated respond to the algorithm, and learning the rules of the game itself. This is where machine learning meets incentives, mechanism design and equilibrium.\n"
+    },
+    {
+      "id": "m_sc",
+      "label": "Strategic Classification",
+      "type": "subtopic",
+      "color": "#ED64A6",
+      "parent": "f_strat",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: people change their features in response to a known classifier. Econ use: information design with manipulable data, and manipulation-robust prediction.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "m_perf",
+      "label": "Performative Prediction",
+      "type": "subtopic",
+      "color": "#ED64A6",
+      "parent": "f_strat",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: early"
+      ],
+      "description": "CS idea: deploying a model changes the distribution of the data it later learns from. Econ use: early; it arises whenever a deployed prediction shapes the behavior or markets it predicts.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "m_audit",
+      "label": "Audits in Strategic Classification",
+      "type": "subtopic",
+      "color": "#ED64A6",
+      "parent": "f_strat",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: early"
+      ],
+      "description": "Jointly design a scoring rule and the probability of verifying claims, as in tax audits or eligibility checks.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "m_dme",
+      "label": "Differentiable Mechanism Design",
+      "type": "subtopic",
+      "color": "#ED64A6",
+      "parent": "f_strat",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: growing"
+      ],
+      "description": "Learn auctions and other mechanisms with neural networks, enforcing incentive compatibility through the training objective.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "m_marl",
+      "label": "Multi-Agent RL for Policy Design",
+      "type": "subtopic",
+      "color": "#ED64A6",
+      "parent": "f_strat",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: early"
+      ],
+      "description": "Many learning agents and a learning planner, used for example to search for tax schedules in simulation.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "m_llmag",
+      "label": "LLM Agents as Simulated Subjects",
+      "type": "subtopic",
+      "color": "#ED64A6",
+      "parent": "f_strat",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: growing"
+      ],
+      "description": "Use large language models as simulated economic agents in experiments.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "f_gen",
+      "label": "Generative Models and Simulation",
+      "type": "topic",
+      "color": "#68D391",
+      "description": "Models that generate realistic data, and inference methods for models that can only be simulated. Economists use them for structural estimation and for designing Monte Carlo studies.\n"
+    },
+    {
+      "id": "m_gan",
+      "label": "Generative Adversarial Networks",
+      "type": "subtopic",
+      "color": "#68D391",
+      "parent": "f_gen",
+      "key_concepts": [
+        "Level: L2 Deep learning",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: a generator and a discriminator trained against each other. Econ use: adversarial structural estimation, and realistic data-generating processes for Monte Carlo studies.\n",
+      "level": "L2 · Deep learning"
+    },
+    {
+      "id": "m_diff",
+      "label": "Diffusion Models and Normalizing Flows",
+      "type": "subtopic",
+      "color": "#68D391",
+      "parent": "f_gen",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: early"
+      ],
+      "description": "CS idea: high-fidelity generative models of complex distributions. Econ use: early; synthetic versions of confidential microdata.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "m_sbi",
+      "label": "Simulation-Based Inference",
+      "type": "subtopic",
+      "color": "#68D391",
+      "parent": "f_gen",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: neural estimation of posteriors or likelihoods when only a simulator is available. Econ use: structural models with intractable likelihoods.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "f_trust",
+      "label": "Privacy, Fairness and Robustness",
+      "type": "topic",
+      "color": "#ECC94B",
+      "description": "Making learned systems private, fair and reliable when the deployment population differs from the training data. In economics these map to disclosure limitation, equity objectives and external validity.\n"
+    },
+    {
+      "id": "m_fair",
+      "label": "Algorithmic Fairness",
+      "type": "subtopic",
+      "color": "#ECC94B",
+      "parent": "f_trust",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: parity constraints on errors or outcomes across groups. Econ use: fairness framed as a welfare and equity objective in algorithmic decisions.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "m_dp",
+      "label": "Differential Privacy",
+      "type": "subtopic",
+      "color": "#ECC94B",
+      "parent": "f_trust",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: add calibrated noise so individual records cannot be inferred. Econ use: the 2020 US Census, and bias and inference with privacy-protected statistics.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "m_da",
+      "label": "Distribution Shift and Transportability",
+      "type": "subtopic",
+      "color": "#ECC94B",
+      "parent": "f_trust",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: adapt models when deployment data differ from training data. Econ use: external validity, and transporting causal effects across populations.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "m_fed",
+      "label": "Federated Learning",
+      "type": "subtopic",
+      "color": "#ECC94B",
+      "parent": "f_trust",
+      "key_concepts": [
+        "Level: L4 Decision, strategy and trust",
+        "Econ adoption: early"
+      ],
+      "description": "CS idea: train a model across data holders without pooling the raw data. Econ use: early; analysis across registries that cannot be merged.\n",
+      "level": "L4 · Decision, strategy and trust"
+    },
+    {
+      "id": "f_data",
+      "label": "Text, Image and Network Data",
+      "type": "topic",
+      "color": "#63B3ED",
+      "description": "Turning unstructured data (documents, images, networks) into variables. The recurring econometric issue is valid inference when the variables are themselves model outputs.\n"
+    },
+    {
+      "id": "m_lda",
+      "label": "Topic Models (LDA)",
+      "type": "subtopic",
+      "color": "#63B3ED",
+      "parent": "f_data",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: represent documents as mixtures of latent topics. Econ use: measuring the content of central-bank and policy deliberations.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "m_cnn",
+      "label": "Convolutional Networks and Computer Vision",
+      "type": "subtopic",
+      "color": "#63B3ED",
+      "parent": "f_data",
+      "key_concepts": [
+        "Level: L2 Deep learning",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: learn features directly from images. Econ use: measuring poverty and economic activity from satellite imagery.\n",
+      "level": "L2 · Deep learning"
+    },
+    {
+      "id": "m_emb",
+      "label": "Word and Text Embeddings",
+      "type": "subtopic",
+      "color": "#63B3ED",
+      "parent": "f_data",
+      "key_concepts": [
+        "Level: L2 Deep learning",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: represent words or documents as vectors whose geometry tracks meaning. Econ use: measuring culture, ideology and political language.\n",
+      "level": "L2 · Deep learning"
+    },
+    {
+      "id": "m_gnn",
+      "label": "Graph Neural Networks",
+      "type": "subtopic",
+      "color": "#63B3ED",
+      "parent": "f_data",
+      "key_concepts": [
+        "Level: L2 Deep learning",
+        "Econ adoption: early"
+      ],
+      "description": "CS idea: learn on network-structured data by passing information along edges. Econ use: early; network interference and spillovers, which econometrics handles with exposure mappings.\n",
+      "level": "L2 · Deep learning"
+    },
+    {
+      "id": "m_llm",
+      "label": "LLMs as Measurement Tools",
+      "type": "subtopic",
+      "color": "#63B3ED",
+      "parent": "f_data",
+      "key_concepts": [
+        "Level: L5 Frontier",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: use large language models to code text into variables. Econ use: requires validation data to correct LLM errors before downstream inference.\n",
+      "level": "L5 · Frontier"
+    },
+    {
+      "id": "f_opt",
+      "label": "Optimization and Geometry",
+      "type": "topic",
+      "color": "#C05621",
+      "description": "Tools for comparing distributions and computing gradients at scale, used in matching markets, distributional effects and large structural models.\n"
+    },
+    {
+      "id": "m_ot",
+      "label": "Optimal Transport",
+      "type": "subtopic",
+      "color": "#C05621",
+      "parent": "f_opt",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: the cheapest way to move one distribution onto another. Econ use: matching markets, distributional synthetic controls and distributional treatment effects.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "m_autodiff",
+      "label": "Automatic Differentiation and GPU Optimization",
+      "type": "subtopic",
+      "color": "#C05621",
+      "parent": "f_opt",
+      "key_concepts": [
+        "Level: L1 Classical ML",
+        "Econ adoption: growing"
+      ],
+      "description": "CS idea: compute exact gradients of programs automatically. Econ use: faster estimation of large structural models.\n",
+      "level": "L1 · Classical ML"
+    },
+    {
+      "id": "athey_imbens_2016",
+      "label": "Recursive Partitioning for Heterogeneous Causal Effects",
+      "type": "paper",
+      "authors": [
+        "Athey",
+        "Imbens"
+      ],
+      "year": 2016,
+      "journal": "PNAS",
+      "url": "https://doi.org/10.1073/pnas.1510489113",
+      "summary": "Causal trees: splits the covariate space to find groups with different treatment effects, with honest estimation (one sample to split, another to estimate)."
+    },
+    {
+      "id": "abadie_imbens_2006",
+      "label": "Large Sample Properties of Matching Estimators for Average Treatment Effects",
+      "type": "paper",
+      "authors": [
+        "Abadie",
+        "Imbens"
+      ],
+      "year": 2006,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.1111/j.1468-0262.2006.00655.x",
+      "summary": "Asymptotic theory for nearest-neighbor matching estimators, including their bias with several continuous covariates."
+    },
+    {
+      "id": "gentzkow_kelly_taddy_2019",
+      "label": "Text as Data",
+      "type": "paper",
+      "authors": [
+        "Gentzkow",
+        "Kelly",
+        "Taddy"
+      ],
+      "year": 2019,
+      "journal": "Journal of Economic Literature",
+      "url": "https://doi.org/10.1257/jel.20181020",
+      "summary": "Survey of statistical methods for turning text into data for economic research."
+    },
+    {
+      "id": "singh_sahani_gretton_2019",
+      "label": "Kernel Instrumental Variable Regression",
+      "type": "paper",
+      "authors": [
+        "Singh",
+        "Sahani",
+        "Gretton"
+      ],
+      "year": 2019,
+      "journal": "NeurIPS",
+      "url": "https://proceedings.neurips.cc/paper/2019/hash/17b3c7061788dbe82de5abe9f6fe22b3-Abstract.html",
+      "summary": "Nonparametric IV regression with kernel methods: a two-stage procedure in reproducing kernel Hilbert spaces."
+    },
+    {
+      "id": "hazlett_2020",
+      "label": "Kernel Balancing: A Flexible Non-Parametric Weighting Procedure for Estimating Causal Effects",
+      "type": "paper",
+      "authors": [
+        "Hazlett"
+      ],
+      "year": 2020,
+      "journal": "Statistica Sinica",
+      "url": "https://www3.stat.sinica.edu.tw/statistica/J30N3/J30N32/J30N32.html",
+      "summary": "Weights control units so that treated and control groups match on a kernel-based expansion of the covariates."
+    },
+    {
+      "id": "hoberg_phillips_2016",
+      "label": "Text-Based Network Industries and Endogenous Product Differentiation",
+      "type": "paper",
+      "authors": [
+        "Hoberg",
+        "Phillips"
+      ],
+      "year": 2016,
+      "journal": "Journal of Political Economy",
+      "url": "https://doi.org/10.1086/688176",
+      "summary": "Builds firm-to-firm product similarity from the text of 10-K product descriptions and uses it to define industries."
+    },
+    {
+      "id": "bonhomme_manresa_2015",
+      "label": "Grouped Patterns of Heterogeneity in Panel Data",
+      "type": "paper",
+      "authors": [
+        "Bonhomme",
+        "Manresa"
+      ],
+      "year": 2015,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA11319",
+      "summary": "Grouped fixed effects: units belong to a small number of latent groups, estimated with a k-means style algorithm."
+    },
+    {
+      "id": "bonhomme_lamadon_manresa_2022",
+      "label": "Discretizing Unobserved Heterogeneity",
+      "type": "paper",
+      "authors": [
+        "Bonhomme",
+        "Lamadon",
+        "Manresa"
+      ],
+      "year": 2022,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA15238",
+      "summary": "Two-step approach: classify units with k-means on moments, then estimate the model with group indicators."
+    },
+    {
+      "id": "bai_2009",
+      "label": "Panel Data Models with Interactive Fixed Effects",
+      "type": "paper",
+      "authors": [
+        "Bai"
+      ],
+      "year": 2009,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA6135",
+      "summary": "Panel regression with factor-structure errors, estimated by iterating between least squares and principal components."
+    },
+    {
+      "id": "filmer_pritchett_2001",
+      "label": "Estimating Wealth Effects without Expenditure Data—or Tears: An Application to Educational Enrollments in States of India",
+      "type": "paper",
+      "authors": [
+        "Filmer",
+        "Pritchett"
+      ],
+      "year": 2001,
+      "journal": "Demography",
+      "url": "https://doi.org/10.1353/dem.2001.0003",
+      "summary": "Builds a household asset index with principal components as a proxy for wealth."
+    },
+    {
+      "id": "chernozhukov_2018_dml",
+      "label": "Double/Debiased Machine Learning for Treatment and Structural Parameters",
+      "type": "paper",
+      "authors": [
+        "Chernozhukov",
+        "Chetverikov",
+        "Demirer",
+        "Duflo",
+        "Hansen",
+        "Newey",
+        "Robins"
+      ],
+      "year": 2018,
+      "journal": "The Econometrics Journal",
+      "url": "https://doi.org/10.1111/ectj.12097",
+      "summary": "Neyman-orthogonal scores plus cross-fitting give root-n inference on causal parameters when nuisance functions are fit with machine learning."
+    },
+    {
+      "id": "kitagawa_tetenov_2018",
+      "label": "Who Should Be Treated? Empirical Welfare Maximization Methods for Treatment Choice",
+      "type": "paper",
+      "authors": [
+        "Kitagawa",
+        "Tetenov"
+      ],
+      "year": 2018,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA13288",
+      "summary": "Empirical welfare maximization: choose a treatment rule from a class of rules to maximize estimated welfare, with regret bounds."
+    },
+    {
+      "id": "athey_wager_2021",
+      "label": "Policy Learning With Observational Data",
+      "type": "paper",
+      "authors": [
+        "Athey",
+        "Wager"
+      ],
+      "year": 2021,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA15732",
+      "summary": "Learns treatment assignment rules from observational data with doubly robust scores, with regret guarantees."
+    },
+    {
+      "id": "yadlowsky_2025",
+      "label": "Evaluating Treatment Prioritization Rules via Rank-Weighted Average Treatment Effects",
+      "type": "paper",
+      "authors": [
+        "Yadlowsky",
+        "Fleming",
+        "Shah",
+        "Brunskill",
+        "Wager"
+      ],
+      "year": 2025,
+      "journal": "Journal of the American Statistical Association",
+      "url": "https://doi.org/10.1080/01621459.2024.2393466",
+      "summary": "RATE: a family of metrics (including AUTOC and Qini) for testing whether a rule ranks units by their treatment benefit."
+    },
+    {
+      "id": "belloni_chernozhukov_hansen_2014",
+      "label": "Inference on Treatment Effects after Selection among High-Dimensional Controls",
+      "type": "paper",
+      "authors": [
+        "Belloni",
+        "Chernozhukov",
+        "Hansen"
+      ],
+      "year": 2014,
+      "journal": "Review of Economic Studies",
+      "url": "https://doi.org/10.1093/restud/rdt044",
+      "summary": "Post-double-selection: lasso on both the outcome and the treatment equation, then OLS on the union of selected controls."
+    },
+    {
+      "id": "belloni_chen_chernozhukov_hansen_2012",
+      "label": "Sparse Models and Methods for Optimal Instruments with an Application to Eminent Domain",
+      "type": "paper",
+      "authors": [
+        "Belloni",
+        "Chen",
+        "Chernozhukov",
+        "Hansen"
+      ],
+      "year": 2012,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA9626",
+      "summary": "Lasso-based selection of instruments in IV models with many instruments."
+    },
+    {
+      "id": "wager_athey_2018",
+      "label": "Estimation and Inference of Heterogeneous Treatment Effects using Random Forests",
+      "type": "paper",
+      "authors": [
+        "Wager",
+        "Athey"
+      ],
+      "year": 2018,
+      "journal": "Journal of the American Statistical Association",
+      "url": "https://doi.org/10.1080/01621459.2017.1319839",
+      "summary": "Causal forests: honest random forests for treatment effects, with asymptotic normality and confidence intervals."
+    },
+    {
+      "id": "kleinberg_2018",
+      "label": "Human Decisions and Machine Predictions",
+      "type": "paper",
+      "authors": [
+        "Kleinberg",
+        "Lakkaraju",
+        "Leskovec",
+        "Ludwig",
+        "Mullainathan"
+      ],
+      "year": 2018,
+      "journal": "Quarterly Journal of Economics",
+      "url": "https://doi.org/10.1093/qje/qjx032",
+      "summary": "Compares judges' bail decisions with machine-learning predictions of pretrial risk, handling the selective-labels problem."
+    },
+    {
+      "id": "kasahara_shimotsu_2009",
+      "label": "Nonparametric Identification of Finite Mixture Models of Dynamic Discrete Choices",
+      "type": "paper",
+      "authors": [
+        "Kasahara",
+        "Shimotsu"
+      ],
+      "year": 2009,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA6763",
+      "summary": "Conditions under which finite mixture (latent type) dynamic discrete choice models are nonparametrically identified."
+    },
+    {
+      "id": "hansen_mcmahon_prat_2018",
+      "label": "Transparency and Deliberation within the FOMC: A Computational Linguistics Approach",
+      "type": "paper",
+      "authors": [
+        "Hansen",
+        "McMahon",
+        "Prat"
+      ],
+      "year": 2018,
+      "journal": "Quarterly Journal of Economics",
+      "url": "https://doi.org/10.1093/qje/qjx045",
+      "summary": "Uses topic models on FOMC transcripts to study how transparency changed deliberation."
+    },
+    {
+      "id": "athey_2021_mc",
+      "label": "Matrix Completion Methods for Causal Panel Data Models",
+      "type": "paper",
+      "authors": [
+        "Athey",
+        "Bayati",
+        "Doudchenko",
+        "Imbens",
+        "Khosravi"
+      ],
+      "year": 2021,
+      "journal": "Journal of the American Statistical Association",
+      "url": "https://doi.org/10.1080/01621459.2021.1891924",
+      "summary": "Treats missing untreated potential outcomes in a panel as a low-rank matrix completion problem with nuclear norm regularization."
+    },
+    {
+      "id": "galichon_2016",
+      "label": "Optimal Transport Methods in Economics",
+      "type": "paper",
+      "authors": [
+        "Galichon"
+      ],
+      "year": 2016,
+      "journal": "Princeton University Press (book)",
+      "url": "https://press.princeton.edu/books/hardcover/9780691172767/optimal-transport-methods-in-economics",
+      "summary": "Textbook on optimal transport for economists, with matching models as a main application."
+    },
+    {
+      "id": "gunsilius_2023",
+      "label": "Distributional Synthetic Controls",
+      "type": "paper",
+      "authors": [
+        "Gunsilius"
+      ],
+      "year": 2023,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA18260",
+      "summary": "Extends synthetic control to whole outcome distributions using optimal transport (Wasserstein) geometry."
+    },
+    {
+      "id": "farrell_liang_misra_2021",
+      "label": "Deep Neural Networks for Estimation and Inference",
+      "type": "paper",
+      "authors": [
+        "Farrell",
+        "Liang",
+        "Misra"
+      ],
+      "year": 2021,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA16901",
+      "summary": "Convergence rates for deep neural networks that justify their use as first-step estimators in semiparametric inference."
+    },
+    {
+      "id": "hartford_2017",
+      "label": "Deep IV: A Flexible Approach for Counterfactual Prediction",
+      "type": "paper",
+      "authors": [
+        "Hartford",
+        "Lewis",
+        "Leyton-Brown",
+        "Taddy"
+      ],
+      "year": 2017,
+      "journal": "ICML (PMLR 70)",
+      "url": "https://proceedings.mlr.press/v70/hartford17a.html",
+      "summary": "Two-stage IV with deep networks: a first-stage conditional density model and a second-stage outcome network."
+    },
+    {
+      "id": "jean_2016",
+      "label": "Combining Satellite Imagery and Machine Learning to Predict Poverty",
+      "type": "paper",
+      "authors": [
+        "Jean",
+        "Burke",
+        "Xie",
+        "Davis",
+        "Lobell",
+        "Ermon"
+      ],
+      "year": 2016,
+      "journal": "Science",
+      "url": "https://doi.org/10.1126/science.aaf7894",
+      "summary": "Convolutional networks on satellite images, trained with transfer learning, to predict local poverty in African countries."
+    },
+    {
+      "id": "kozlowski_taddy_evans_2019",
+      "label": "The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings",
+      "type": "paper",
+      "authors": [
+        "Kozlowski",
+        "Taddy",
+        "Evans"
+      ],
+      "year": 2019,
+      "journal": "American Sociological Review",
+      "url": "https://doi.org/10.1177/0003122419877135",
+      "summary": "Uses directions in word-embedding space to measure cultural dimensions of social class over time."
+    },
+    {
+      "id": "aronow_samii_2017",
+      "label": "Estimating Average Causal Effects under General Interference, with Application to a Social Network Experiment",
+      "type": "paper",
+      "authors": [
+        "Aronow",
+        "Samii"
+      ],
+      "year": 2017,
+      "journal": "Annals of Applied Statistics",
+      "url": "https://doi.org/10.1214/16-AOAS1005",
+      "summary": "Exposure mappings and design-based estimators for causal effects when units affect each other through a network."
+    },
+    {
+      "id": "kaji_manresa_pouliot_2023",
+      "label": "An Adversarial Approach to Structural Estimation",
+      "type": "paper",
+      "authors": [
+        "Kaji",
+        "Manresa",
+        "Pouliot"
+      ],
+      "year": 2023,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA18707",
+      "summary": "Estimates structural parameters by making simulated data hard for a discriminator to tell apart from real data, as in a GAN."
+    },
+    {
+      "id": "athey_imbens_metzger_munro_2024",
+      "label": "Using Wasserstein Generative Adversarial Networks for the Design of Monte Carlo Simulations",
+      "type": "paper",
+      "authors": [
+        "Athey",
+        "Imbens",
+        "Metzger",
+        "Munro"
+      ],
+      "year": 2024,
+      "journal": "Journal of Econometrics",
+      "url": "https://doi.org/10.1016/j.jeconom.2020.09.013",
+      "summary": "Generates simulation data that look like a real dataset, to compare estimators under realistic designs."
+    },
+    {
+      "id": "kunzel_2019",
+      "label": "Metalearners for Estimating Heterogeneous Treatment Effects using Machine Learning",
+      "type": "paper",
+      "authors": [
+        "Künzel",
+        "Sekhon",
+        "Bickel",
+        "Yu"
+      ],
+      "year": 2019,
+      "journal": "PNAS",
+      "url": "https://doi.org/10.1073/pnas.1804597116",
+      "summary": "Compares S-, T- and the new X-learner for conditional treatment effects."
+    },
+    {
+      "id": "nie_wager_2021",
+      "label": "Quasi-Oracle Estimation of Heterogeneous Treatment Effects",
+      "type": "paper",
+      "authors": [
+        "Nie",
+        "Wager"
+      ],
+      "year": 2021,
+      "journal": "Biometrika",
+      "url": "https://doi.org/10.1093/biomet/asaa076",
+      "summary": "R-learner: a residual-on-residual loss for treatment effect heterogeneity with oracle-like error bounds."
+    },
+    {
+      "id": "kennedy_2023",
+      "label": "Towards Optimal Doubly Robust Estimation of Heterogeneous Causal Effects",
+      "type": "paper",
+      "authors": [
+        "Kennedy"
+      ],
+      "year": 2023,
+      "journal": "Electronic Journal of Statistics",
+      "url": "https://doi.org/10.1214/23-EJS2157",
+      "summary": "DR-learner: regresses doubly robust pseudo-outcomes on covariates, with model-free error bounds."
+    },
+    {
+      "id": "athey_tibshirani_wager_2019",
+      "label": "Generalized Random Forests",
+      "type": "paper",
+      "authors": [
+        "Athey",
+        "Tibshirani",
+        "Wager"
+      ],
+      "year": 2019,
+      "journal": "Annals of Statistics",
+      "url": "https://doi.org/10.1214/18-AOS1709",
+      "summary": "Forest-based local estimating equations; covers causal forests, quantile forests and IV forests."
+    },
+    {
+      "id": "davis_heller_2017",
+      "label": "Using Causal Forests to Predict Treatment Heterogeneity: An Application to Summer Jobs",
+      "type": "paper",
+      "authors": [
+        "Davis",
+        "Heller"
+      ],
+      "year": 2017,
+      "journal": "AER Papers & Proceedings",
+      "url": "https://doi.org/10.1257/aer.p20171000",
+      "summary": "Applies causal forests to a youth summer jobs experiment to find who benefits."
+    },
+    {
+      "id": "chernozhukov_2025_gml",
+      "label": "Fisher–Schultz Lecture: Generic Machine Learning Inference on Heterogeneous Treatment Effects in Randomized Experiments, with an Application to Immunization in India",
+      "type": "paper",
+      "authors": [
+        "Chernozhukov",
+        "Demirer",
+        "Duflo",
+        "Fernández-Val"
+      ],
+      "year": 2025,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA19303",
+      "summary": "Valid inference on features of effect heterogeneity (BLP, GATES, CLAN) using any machine-learning proxy."
+    },
+    {
+      "id": "lei_candes_2021",
+      "label": "Conformal Inference of Counterfactuals and Individual Treatment Effects",
+      "type": "paper",
+      "authors": [
+        "Lei",
+        "Candès"
+      ],
+      "year": 2021,
+      "journal": "Journal of the Royal Statistical Society: Series B",
+      "url": "https://doi.org/10.1111/rssb.12445",
+      "summary": "Weighted conformal prediction intervals for counterfactual outcomes and individual treatment effects."
+    },
+    {
+      "id": "chernozhukov_wuthrich_zhu_2021",
+      "label": "An Exact and Robust Conformal Inference Method for Counterfactual and Synthetic Controls",
+      "type": "paper",
+      "authors": [
+        "Chernozhukov",
+        "Wüthrich",
+        "Zhu"
+      ],
+      "year": 2021,
+      "journal": "Journal of the American Statistical Association",
+      "url": "https://doi.org/10.1080/01621459.2021.1920957",
+      "summary": "Permutation-based conformal inference for synthetic control and other counterfactual panel methods."
+    },
+    {
+      "id": "chernozhukov_2026_ovb",
+      "label": "Long Story Short: Omitted Variable Bias in Causal Machine Learning",
+      "type": "paper",
+      "authors": [
+        "Chernozhukov",
+        "Cinelli",
+        "Newey",
+        "Sharma",
+        "Syrgkanis"
+      ],
+      "year": 2026,
+      "journal": "Review of Economics and Statistics",
+      "url": "https://doi.org/10.1162/rest.a.1705",
+      "summary": "Sensitivity analysis that bounds omitted variable bias for a broad class of causal parameters estimated with machine learning."
+    },
+    {
+      "id": "tchetgen_2024",
+      "label": "An Introduction to Proximal Causal Inference",
+      "type": "paper",
+      "authors": [
+        "Tchetgen Tchetgen",
+        "Ying",
+        "Cui",
+        "Shi",
+        "Miao"
+      ],
+      "year": 2024,
+      "journal": "Statistical Science",
+      "url": "https://doi.org/10.1214/23-STS911",
+      "summary": "Introduction to identification with proxy variables (negative controls) for unmeasured confounding."
+    },
+    {
+      "id": "zheng_2018_notears",
+      "label": "DAGs with NO TEARS: Continuous Optimization for Structure Learning",
+      "type": "paper",
+      "authors": [
+        "Zheng",
+        "Aragam",
+        "Ravikumar",
+        "Xing"
+      ],
+      "year": 2018,
+      "journal": "NeurIPS",
+      "url": "https://arxiv.org/abs/1803.01422",
+      "summary": "Turns DAG structure learning into continuous optimization with a smooth acyclicity constraint."
+    },
+    {
+      "id": "kasy_sautmann_2021",
+      "label": "Adaptive Treatment Assignment in Experiments for Policy Choice",
+      "type": "paper",
+      "authors": [
+        "Kasy",
+        "Sautmann"
+      ],
+      "year": 2021,
+      "journal": "Econometrica",
+      "url": "https://doi.org/10.3982/ECTA17527",
+      "summary": "Exploration sampling: an adaptive experimental design aimed at choosing the best policy at the end."
+    },
+    {
+      "id": "hadad_2021",
+      "label": "Confidence Intervals for Policy Evaluation in Adaptive Experiments",
+      "type": "paper",
+      "authors": [
+        "Hadad",
+        "Hirshberg",
+        "Zhan",
+        "Wager",
+        "Athey"
+      ],
+      "year": 2021,
+      "journal": "PNAS",
+      "url": "https://doi.org/10.1073/pnas.2014602118",
+      "summary": "Adaptively weighted estimators that give valid confidence intervals after bandit-style experiments."
+    },
+    {
+      "id": "dudik_2011",
+      "label": "Doubly Robust Policy Evaluation and Learning",
+      "type": "paper",
+      "authors": [
+        "Dudík",
+        "Langford",
+        "Li"
+      ],
+      "year": 2011,
+      "journal": "ICML",
+      "url": "https://arxiv.org/abs/1103.4601",
+      "summary": "Doubly robust off-policy evaluation and learning for contextual bandits."
+    },
+    {
+      "id": "igami_2020",
+      "label": "Artificial Intelligence as Structural Estimation: Deep Blue, Bonanza, and AlphaGo",
+      "type": "paper",
+      "authors": [
+        "Igami"
+      ],
+      "year": 2020,
+      "journal": "The Econometrics Journal",
+      "url": "https://doi.org/10.1093/ectj/utaa005",
+      "summary": "Reads game-playing AI algorithms as versions of structural estimation of dynamic models."
+    },
+    {
+      "id": "hardt_2016",
+      "label": "Strategic Classification",
+      "type": "paper",
+      "authors": [
+        "Hardt",
+        "Megiddo",
+        "Papadimitriou",
+        "Wootters"
+      ],
+      "year": 2016,
+      "journal": "ITCS",
+      "url": "https://doi.org/10.1145/2840728.2840730",
+      "summary": "Classification as a game in which individuals change their features at a cost to get a better outcome."
+    },
+    {
+      "id": "frankel_kartik_2022",
+      "label": "Improving Information from Manipulable Data",
+      "type": "paper",
+      "authors": [
+        "Frankel",
+        "Kartik"
+      ],
+      "year": 2022,
+      "journal": "Journal of the European Economic Association",
+      "url": "https://doi.org/10.1093/jeea/jvab017",
+      "summary": "Shows that a designer facing manipulation can get more information by committing to put less weight on manipulable data."
+    },
+    {
+      "id": "rambachan_2020",
+      "label": "An Economic Perspective on Algorithmic Fairness",
+      "type": "paper",
+      "authors": [
+        "Rambachan",
+        "Kleinberg",
+        "Ludwig",
+        "Mullainathan"
+      ],
+      "year": 2020,
+      "journal": "AEA Papers & Proceedings",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/pandp.20201036",
+      "summary": "Puts fairness into the planner's welfare function instead of constraining the prediction algorithm."
+    },
+    {
+      "id": "pearl_bareinboim_2014",
+      "label": "External Validity: From Do-Calculus to Transportability Across Populations",
+      "type": "paper",
+      "authors": [
+        "Pearl",
+        "Bareinboim"
+      ],
+      "year": 2014,
+      "journal": "Statistical Science",
+      "url": "https://doi.org/10.1214/14-STS486",
+      "summary": "Graphical conditions for transporting causal effects from one population to another."
+    },
+    {
+      "id": "hollmann_2025",
+      "label": "Accurate Predictions on Small Data with a Tabular Foundation Model",
+      "type": "paper",
+      "authors": [
+        "Hollmann",
+        "Müller",
+        "Purucker",
+        "Krishnakumar",
+        "Körfer",
+        "Hoo",
+        "Schirrmeister",
+        "Hutter"
+      ],
+      "year": 2025,
+      "journal": "Nature",
+      "url": "https://doi.org/10.1038/s41586-024-08328-6",
+      "summary": "TabPFN: a transformer pretrained on synthetic tasks that predicts on small tabular datasets in one forward pass."
+    },
+    {
+      "id": "scholkopf_2021",
+      "label": "Toward Causal Representation Learning",
+      "type": "paper",
+      "authors": [
+        "Schölkopf",
+        "Locatello",
+        "Bauer",
+        "Ke",
+        "Kalchbrenner",
+        "Goyal",
+        "Bengio"
+      ],
+      "year": 2021,
+      "journal": "Proceedings of the IEEE",
+      "url": "https://doi.org/10.1109/JPROC.2021.3058954",
+      "summary": "Perspective on learning causal variables from raw high-dimensional data."
+    },
+    {
+      "id": "zheng_2022_aieconomist",
+      "label": "The AI Economist: Taxation Policy Design via Two-Level Deep Multiagent Reinforcement Learning",
+      "type": "paper",
+      "authors": [
+        "Zheng",
+        "Trott",
+        "Srinivasa",
+        "Parkes",
+        "Socher"
+      ],
+      "year": 2022,
+      "journal": "Science Advances",
+      "url": "https://doi.org/10.1126/sciadv.abk2607",
+      "summary": "A planner and many agents learn together with reinforcement learning to design tax policy in a simulated economy."
+    },
+    {
+      "id": "horton_2023",
+      "label": "Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus?",
+      "type": "paper",
+      "authors": [
+        "Horton"
+      ],
+      "year": 2023,
+      "journal": "NBER Working Paper 31122",
+      "url": "https://www.nber.org/papers/w31122",
+      "summary": "Runs classic behavioral economics experiments on language models used as simulated agents."
+    },
+    {
+      "id": "ludwig_mullainathan_2024",
+      "label": "Machine Learning as a Tool for Hypothesis Generation",
+      "type": "paper",
+      "authors": [
+        "Ludwig",
+        "Mullainathan"
+      ],
+      "year": 2024,
+      "journal": "Quarterly Journal of Economics",
+      "url": "https://doi.org/10.1093/qje/qjad055",
+      "summary": "A procedure that uses a predictive model of judges' decisions to generate new, interpretable hypotheses."
+    },
+    {
+      "id": "cranmer_2020",
+      "label": "The Frontier of Simulation-Based Inference",
+      "type": "paper",
+      "authors": [
+        "Cranmer",
+        "Brehmer",
+        "Louppe"
+      ],
+      "year": 2020,
+      "journal": "PNAS",
+      "url": "https://doi.org/10.1073/pnas.1912789117",
+      "summary": "Review of inference methods for models that can be simulated but have no tractable likelihood."
+    },
+    {
+      "id": "christensen_goncalves_perron_2026",
+      "label": "Bootstrapping with AI/ML-generated labels",
+      "type": "paper",
+      "authors": [
+        "Christensen",
+        "Gonçalves",
+        "Perron"
+      ],
+      "year": 2026,
+      "journal": "arXiv 2604.23770",
+      "url": "https://arxiv.org/abs/2604.23770",
+      "summary": "Bootstrap inference when some variables are labels produced by AI or machine-learning models."
+    },
+    {
+      "id": "sakaguchi_2025",
+      "label": "Estimation of optimal dynamic treatment assignment rules under policy constraints",
+      "type": "paper",
+      "authors": [
+        "Sakaguchi"
+      ],
+      "year": 2025,
+      "journal": "Quantitative Economics",
+      "url": "https://doi.org/10.3982/QE2288",
+      "summary": "Learns multi-stage treatment assignment rules from data when the rules must satisfy policy constraints."
+    },
+    {
+      "id": "sakaguchi_2024",
+      "label": "Policy Learning for Optimal Dynamic Treatment Regimes with Observational Data",
+      "type": "paper",
+      "authors": [
+        "Sakaguchi"
+      ],
+      "year": 2024,
+      "journal": "arXiv 2404.00221",
+      "url": "https://arxiv.org/abs/2404.00221",
+      "summary": "Policy learning for multi-stage treatment regimes using observational data."
+    },
+    {
+      "id": "bjorkegren_2026",
+      "label": "Manipulation-Robust Prediction",
+      "type": "paper",
+      "authors": [
+        "Björkegren",
+        "Blumenstock",
+        "Knight"
+      ],
+      "year": 2026,
+      "journal": "American Economic Review",
+      "url": "https://doi.org/10.1257/aer.20241087",
+      "summary": "Prediction rules that stay accurate when the people being scored change their behavior to game them."
+    },
+    {
+      "id": "kenny_2024",
+      "label": "Evaluating bias and noise induced by the U.S. Census Bureau's privacy protection methods",
+      "type": "paper",
+      "authors": [
+        "Kenny",
+        "McCartan",
+        "Kuriwaki",
+        "Simko",
+        "Imai"
+      ],
+      "year": 2024,
+      "journal": "Science Advances",
+      "url": "https://doi.org/10.1126/sciadv.adl2524",
+      "summary": "Measures the bias and noise that the Census Bureau's privacy protection adds to census counts."
+    },
+    {
+      "id": "chetty_friedman_2019",
+      "label": "A Practical Method to Reduce Privacy Loss when Disclosing Statistics Based on Small Samples",
+      "type": "paper",
+      "authors": [
+        "Chetty",
+        "Friedman"
+      ],
+      "year": 2019,
+      "journal": "AEA Papers & Proceedings",
+      "url": "https://doi.org/10.1257/pandp.20191109",
+      "summary": "Adds calibrated noise to statistics from small cells so they can be published with limited privacy loss."
+    },
+    {
+      "id": "perdomo_2020",
+      "label": "Performative Prediction",
+      "type": "paper",
+      "authors": [
+        "Perdomo",
+        "Zrnic",
+        "Mendler-Dünner",
+        "Hardt"
+      ],
+      "year": 2020,
+      "journal": "ICML (PMLR 119)",
+      "url": "https://proceedings.mlr.press/v119/perdomo20a.html",
+      "summary": "Predictions that change the outcomes they predict; defines performative stability and studies repeated retraining."
+    },
+    {
+      "id": "ebrahimi_franceschetti_2026",
+      "label": "Strategic Classification Has a Missing Lever: Audit Risk",
+      "type": "paper",
+      "authors": [
+        "Ebrahimi",
+        "Franceschetti"
+      ],
+      "year": 2026,
+      "journal": "arXiv 2609.22534",
+      "url": "https://arxiv.org/abs/2609.22534",
+      "summary": "Adds the probability of being audited to the strategic classification problem."
+    },
+    {
+      "id": "estornell_2023",
+      "label": "Incentivizing Recourse through Auditing in Strategic Classification",
+      "type": "paper",
+      "authors": [
+        "Estornell",
+        "Chen",
+        "Das",
+        "Liu",
+        "Vorobeychik"
+      ],
+      "year": 2023,
+      "journal": "IJCAI-23",
+      "url": "https://doi.org/10.24963/ijcai.2023/45",
+      "summary": "Uses audits to push agents toward real improvement instead of manipulation."
+    },
+    {
+      "id": "angelopoulos_2023",
+      "label": "Prediction-powered inference",
+      "type": "paper",
+      "authors": [
+        "Angelopoulos",
+        "Bates",
+        "Fannjiang",
+        "Jordan",
+        "Zrnic"
+      ],
+      "year": 2023,
+      "journal": "Science",
+      "url": "https://doi.org/10.1126/science.adi6000",
+      "summary": "Valid inference that combines a small labeled sample with model predictions on a large unlabeled sample."
+    },
+    {
+      "id": "battaglia_2024",
+      "label": "Inference for Regression with Variables Generated by AI or Machine Learning",
+      "type": "paper",
+      "authors": [
+        "Battaglia",
+        "Christensen",
+        "Hansen",
+        "Sacher"
+      ],
+      "year": 2024,
+      "journal": "arXiv 2402.15585",
+      "url": "https://arxiv.org/abs/2402.15585",
+      "summary": "Inference for regressions in which some variables are produced by AI or machine-learning models."
+    },
+    {
+      "id": "broska_howes_2026",
+      "label": "Cluster-Robust Prediction-Powered Inference",
+      "type": "paper",
+      "authors": [
+        "Broska",
+        "Howes"
+      ],
+      "year": 2026,
+      "journal": "arXiv 2610.09601",
+      "url": "https://arxiv.org/abs/2610.09601",
+      "summary": "Prediction-powered inference with clustered data."
+    },
+    {
+      "id": "grinsztajn_2025",
+      "label": "TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models",
+      "type": "paper",
+      "authors": [
+        "Grinsztajn",
+        "Flöge",
+        "Key",
+        "Birkel",
+        "Jund",
+        "et al."
+      ],
+      "year": 2025,
+      "journal": "arXiv 2511.08667",
+      "url": "https://arxiv.org/abs/2511.08667",
+      "summary": "Next version of the TabPFN tabular foundation model."
+    },
+    {
+      "id": "rametta_fuller_2026",
+      "label": "Are Random Forests Still 'Good Enough'? Tabular Prior-Data Fitted Networks for Predictive and Causal Tasks",
+      "type": "paper",
+      "authors": [
+        "Rametta",
+        "Fuller"
+      ],
+      "year": 2026,
+      "journal": "SocArXiv",
+      "url": "https://doi.org/10.31235/osf.io/g29xc_v1",
+      "summary": "Compares tabular prior-data fitted networks with random forests on predictive and causal tasks."
+    },
+    {
+      "id": "mourao_2026",
+      "label": "Prior-Data Fitted Networks for Causal Inference: a Simulation Study with Real-World Scenarios",
+      "type": "paper",
+      "authors": [
+        "Mourao",
+        "Hajage",
+        "Bystrova",
+        "Bouvarel",
+        "Lapidus",
+        "Carrat",
+        "Glemain"
+      ],
+      "year": 2026,
+      "journal": "arXiv 2603.15928",
+      "url": "https://arxiv.org/abs/2603.15928",
+      "summary": "Simulation study of prior-data fitted networks used for causal effect estimation."
+    },
+    {
+      "id": "balazadeh_2025",
+      "label": "CausalPFN: Amortized Causal Effect Estimation via In-Context Learning",
+      "type": "paper",
+      "authors": [
+        "Balazadeh",
+        "Kamkari",
+        "Thomas",
+        "Ma",
+        "Li",
+        "Cresswell",
+        "Krishnan"
+      ],
+      "year": 2025,
+      "journal": "NeurIPS",
+      "url": "https://openreview.net/forum?id=RblaNJGx8C",
+      "summary": "A transformer pretrained on simulated causal datasets that estimates treatment effects in context."
+    },
+    {
+      "id": "ludwig_mullainathan_rambachan_2026",
+      "label": "Large Language Models: An Applied Econometric Framework",
+      "type": "paper",
+      "authors": [
+        "Ludwig",
+        "Mullainathan",
+        "Rambachan"
+      ],
+      "year": 2026,
+      "journal": "Annual Review of Economics",
+      "url": "https://doi.org/10.1146/annurev-economics-120925-105620",
+      "summary": "An econometric framework for when and how language model outputs can be used in empirical work."
+    },
+    {
+      "id": "dutting_2024",
+      "label": "Optimal Auctions through Deep Learning: Advances in Differentiable Economics",
+      "type": "paper",
+      "authors": [
+        "Dütting",
+        "Feng",
+        "Narasimhan",
+        "Parkes",
+        "Ravindranath"
+      ],
+      "year": 2024,
+      "journal": "Journal of the ACM",
+      "url": "https://doi.org/10.1145/3630749",
+      "summary": "Designs revenue-optimal auctions by training neural networks with incentive-compatibility penalties."
+    },
+    {
+      "id": "thoma_2026",
+      "label": "Deep Incentive Design with Differentiable Equilibrium Blocks",
+      "type": "paper",
+      "authors": [
+        "Thoma",
+        "Piliouras",
+        "Marris"
+      ],
+      "year": 2026,
+      "journal": "arXiv 2603.07705",
+      "url": "https://arxiv.org/abs/2603.07705",
+      "summary": "Incentive design with equilibrium computation built into a differentiable model."
+    },
+    {
+      "id": "athey_susan",
+      "label": "Susan Athey",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "wager_stefan",
+      "label": "Stefan Wager",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "imbens_guido",
+      "label": "Guido Imbens",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "chernozhukov_victor",
+      "label": "Victor Chernozhukov",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "hansen_christian",
+      "label": "Christian Hansen",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "belloni_alexandre",
+      "label": "Alexandre Belloni",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "duflo_esther",
+      "label": "Esther Duflo",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "demirer_mert",
+      "label": "Mert Demirer",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "newey_whitney",
+      "label": "Whitney Newey",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "bonhomme_stephane",
+      "label": "Stéphane Bonhomme",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "manresa_elena",
+      "label": "Elena Manresa",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "kleinberg_jon",
+      "label": "Jon Kleinberg",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "ludwig_jens",
+      "label": "Jens Ludwig",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "mullainathan_sendhil",
+      "label": "Sendhil Mullainathan",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "rambachan_ashesh",
+      "label": "Ashesh Rambachan",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "taddy_matt",
+      "label": "Matt Taddy",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "hardt_moritz",
+      "label": "Moritz Hardt",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "zrnic_tijana",
+      "label": "Tijana Zrnic",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "sakaguchi_shosei",
+      "label": "Shosei Sakaguchi",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "parkes_david",
+      "label": "David Parkes",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "christensen_timothy",
+      "label": "Timothy Christensen",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "hansen_stephen",
+      "label": "Stephen Hansen",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    },
+    {
+      "id": "hutter_frank",
+      "label": "Frank Hutter",
+      "type": "researcher",
+      "affiliation": "",
+      "website": ""
+    }
+  ],
+  "links": [
+    {
+      "source": "f_sup",
+      "target": "m_dt",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_knn",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_nb",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_svm",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_lasso",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_rf",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_gb",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_gp",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_dnn",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_sup",
+      "target": "m_tabpfn",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_uns",
+      "target": "m_dist",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_uns",
+      "target": "m_km",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_uns",
+      "target": "m_hc",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_uns",
+      "target": "m_dbscan",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_uns",
+      "target": "m_pca",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_uns",
+      "target": "m_mix",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_uns",
+      "target": "m_mc",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_uns",
+      "target": "m_ae",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_eval",
+      "target": "m_cv",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_eval",
+      "target": "m_boot",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_eval",
+      "target": "m_cost",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_eval",
+      "target": "m_roc",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_eval",
+      "target": "m_gml",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_eval",
+      "target": "m_conf",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_eval",
+      "target": "m_ppi",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_deepiv",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_meta",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_rdr",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_dml",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_cf",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_pl",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_sens",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_prox",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_disc",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_hyp",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_cpfn",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_causal",
+      "target": "m_crl",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_seq",
+      "target": "m_bandit",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_seq",
+      "target": "m_ope",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_seq",
+      "target": "m_rl",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_seq",
+      "target": "m_dtr",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_strat",
+      "target": "m_sc",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_strat",
+      "target": "m_perf",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_strat",
+      "target": "m_audit",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_strat",
+      "target": "m_dme",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_strat",
+      "target": "m_marl",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_strat",
+      "target": "m_llmag",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_gen",
+      "target": "m_gan",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_gen",
+      "target": "m_diff",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_gen",
+      "target": "m_sbi",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_trust",
+      "target": "m_fair",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_trust",
+      "target": "m_dp",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_trust",
+      "target": "m_da",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_trust",
+      "target": "m_fed",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_data",
+      "target": "m_lda",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_data",
+      "target": "m_cnn",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_data",
+      "target": "m_emb",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_data",
+      "target": "m_gnn",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_data",
+      "target": "m_llm",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_opt",
+      "target": "m_ot",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "f_opt",
+      "target": "m_autodiff",
+      "type": "has_subtopic"
+    },
+    {
+      "source": "athey_imbens_2016",
+      "target": "m_dt",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_imbens_2016",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "abadie_imbens_2006",
+      "target": "m_knn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "abadie_imbens_2006",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "gentzkow_kelly_taddy_2019",
+      "target": "m_nb",
+      "type": "covers_topic"
+    },
+    {
+      "source": "gentzkow_kelly_taddy_2019",
+      "target": "m_emb",
+      "type": "covers_topic"
+    },
+    {
+      "source": "gentzkow_kelly_taddy_2019",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "gentzkow_kelly_taddy_2019",
+      "target": "f_data",
+      "type": "covers_topic"
+    },
+    {
+      "source": "singh_sahani_gretton_2019",
+      "target": "m_svm",
+      "type": "covers_topic"
+    },
+    {
+      "source": "singh_sahani_gretton_2019",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hazlett_2020",
+      "target": "m_svm",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hazlett_2020",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hoberg_phillips_2016",
+      "target": "m_dist",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hoberg_phillips_2016",
+      "target": "f_uns",
+      "type": "covers_topic"
+    },
+    {
+      "source": "bonhomme_manresa_2015",
+      "target": "m_km",
+      "type": "covers_topic"
+    },
+    {
+      "source": "bonhomme_manresa_2015",
+      "target": "f_uns",
+      "type": "covers_topic"
+    },
+    {
+      "source": "bonhomme_lamadon_manresa_2022",
+      "target": "m_km",
+      "type": "covers_topic"
+    },
+    {
+      "source": "bonhomme_lamadon_manresa_2022",
+      "target": "f_uns",
+      "type": "covers_topic"
+    },
+    {
+      "source": "bai_2009",
+      "target": "m_pca",
+      "type": "covers_topic"
+    },
+    {
+      "source": "bai_2009",
+      "target": "f_uns",
+      "type": "covers_topic"
+    },
+    {
+      "source": "filmer_pritchett_2001",
+      "target": "m_pca",
+      "type": "covers_topic"
+    },
+    {
+      "source": "filmer_pritchett_2001",
+      "target": "f_uns",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_2018_dml",
+      "target": "m_cv",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_2018_dml",
+      "target": "m_dml",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_2018_dml",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_2018_dml",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kitagawa_tetenov_2018",
+      "target": "m_cost",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kitagawa_tetenov_2018",
+      "target": "m_pl",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kitagawa_tetenov_2018",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kitagawa_tetenov_2018",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_wager_2021",
+      "target": "m_cost",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_wager_2021",
+      "target": "m_pl",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_wager_2021",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_wager_2021",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "yadlowsky_2025",
+      "target": "m_roc",
+      "type": "covers_topic"
+    },
+    {
+      "source": "yadlowsky_2025",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "belloni_chernozhukov_hansen_2014",
+      "target": "m_lasso",
+      "type": "covers_topic"
+    },
+    {
+      "source": "belloni_chernozhukov_hansen_2014",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "belloni_chen_chernozhukov_hansen_2012",
+      "target": "m_lasso",
+      "type": "covers_topic"
+    },
+    {
+      "source": "belloni_chen_chernozhukov_hansen_2012",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "wager_athey_2018",
+      "target": "m_rf",
+      "type": "covers_topic"
+    },
+    {
+      "source": "wager_athey_2018",
+      "target": "m_cf",
+      "type": "covers_topic"
+    },
+    {
+      "source": "wager_athey_2018",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "wager_athey_2018",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kleinberg_2018",
+      "target": "m_gb",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kleinberg_2018",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kasahara_shimotsu_2009",
+      "target": "m_mix",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kasahara_shimotsu_2009",
+      "target": "f_uns",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hansen_mcmahon_prat_2018",
+      "target": "m_lda",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hansen_mcmahon_prat_2018",
+      "target": "f_data",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_2021_mc",
+      "target": "m_mc",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_2021_mc",
+      "target": "f_uns",
+      "type": "covers_topic"
+    },
+    {
+      "source": "galichon_2016",
+      "target": "m_ot",
+      "type": "covers_topic"
+    },
+    {
+      "source": "galichon_2016",
+      "target": "f_opt",
+      "type": "covers_topic"
+    },
+    {
+      "source": "gunsilius_2023",
+      "target": "m_ot",
+      "type": "covers_topic"
+    },
+    {
+      "source": "gunsilius_2023",
+      "target": "f_opt",
+      "type": "covers_topic"
+    },
+    {
+      "source": "farrell_liang_misra_2021",
+      "target": "m_dnn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "farrell_liang_misra_2021",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hartford_2017",
+      "target": "m_deepiv",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hartford_2017",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "jean_2016",
+      "target": "m_cnn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "jean_2016",
+      "target": "f_data",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kozlowski_taddy_evans_2019",
+      "target": "m_emb",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kozlowski_taddy_evans_2019",
+      "target": "f_data",
+      "type": "covers_topic"
+    },
+    {
+      "source": "aronow_samii_2017",
+      "target": "m_gnn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "aronow_samii_2017",
+      "target": "f_data",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kaji_manresa_pouliot_2023",
+      "target": "m_gan",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kaji_manresa_pouliot_2023",
+      "target": "f_gen",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_imbens_metzger_munro_2024",
+      "target": "m_gan",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_imbens_metzger_munro_2024",
+      "target": "f_gen",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kunzel_2019",
+      "target": "m_meta",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kunzel_2019",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "nie_wager_2021",
+      "target": "m_rdr",
+      "type": "covers_topic"
+    },
+    {
+      "source": "nie_wager_2021",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kennedy_2023",
+      "target": "m_rdr",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kennedy_2023",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_tibshirani_wager_2019",
+      "target": "m_cf",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_tibshirani_wager_2019",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "davis_heller_2017",
+      "target": "m_cf",
+      "type": "covers_topic"
+    },
+    {
+      "source": "davis_heller_2017",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_2025_gml",
+      "target": "m_gml",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_2025_gml",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "lei_candes_2021",
+      "target": "m_conf",
+      "type": "covers_topic"
+    },
+    {
+      "source": "lei_candes_2021",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_wuthrich_zhu_2021",
+      "target": "m_conf",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_wuthrich_zhu_2021",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_2026_ovb",
+      "target": "m_sens",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chernozhukov_2026_ovb",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "tchetgen_2024",
+      "target": "m_prox",
+      "type": "covers_topic"
+    },
+    {
+      "source": "tchetgen_2024",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "zheng_2018_notears",
+      "target": "m_disc",
+      "type": "covers_topic"
+    },
+    {
+      "source": "zheng_2018_notears",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kasy_sautmann_2021",
+      "target": "m_bandit",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kasy_sautmann_2021",
+      "target": "f_seq",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hadad_2021",
+      "target": "m_bandit",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hadad_2021",
+      "target": "f_seq",
+      "type": "covers_topic"
+    },
+    {
+      "source": "dudik_2011",
+      "target": "m_ope",
+      "type": "covers_topic"
+    },
+    {
+      "source": "dudik_2011",
+      "target": "f_seq",
+      "type": "covers_topic"
+    },
+    {
+      "source": "igami_2020",
+      "target": "m_rl",
+      "type": "covers_topic"
+    },
+    {
+      "source": "igami_2020",
+      "target": "f_seq",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hardt_2016",
+      "target": "m_sc",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hardt_2016",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "frankel_kartik_2022",
+      "target": "m_sc",
+      "type": "covers_topic"
+    },
+    {
+      "source": "frankel_kartik_2022",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "rambachan_2020",
+      "target": "m_fair",
+      "type": "covers_topic"
+    },
+    {
+      "source": "rambachan_2020",
+      "target": "f_trust",
+      "type": "covers_topic"
+    },
+    {
+      "source": "pearl_bareinboim_2014",
+      "target": "m_da",
+      "type": "covers_topic"
+    },
+    {
+      "source": "pearl_bareinboim_2014",
+      "target": "f_trust",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hollmann_2025",
+      "target": "m_tabpfn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "hollmann_2025",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "scholkopf_2021",
+      "target": "m_crl",
+      "type": "covers_topic"
+    },
+    {
+      "source": "scholkopf_2021",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "zheng_2022_aieconomist",
+      "target": "m_marl",
+      "type": "covers_topic"
+    },
+    {
+      "source": "zheng_2022_aieconomist",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "horton_2023",
+      "target": "m_llmag",
+      "type": "covers_topic"
+    },
+    {
+      "source": "horton_2023",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "ludwig_mullainathan_2024",
+      "target": "m_hyp",
+      "type": "covers_topic"
+    },
+    {
+      "source": "ludwig_mullainathan_2024",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "cranmer_2020",
+      "target": "m_sbi",
+      "type": "covers_topic"
+    },
+    {
+      "source": "cranmer_2020",
+      "target": "f_gen",
+      "type": "covers_topic"
+    },
+    {
+      "source": "christensen_goncalves_perron_2026",
+      "target": "m_boot",
+      "type": "covers_topic"
+    },
+    {
+      "source": "christensen_goncalves_perron_2026",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "sakaguchi_2025",
+      "target": "m_dtr",
+      "type": "covers_topic"
+    },
+    {
+      "source": "sakaguchi_2025",
+      "target": "f_seq",
+      "type": "covers_topic"
+    },
+    {
+      "source": "sakaguchi_2024",
+      "target": "m_dtr",
+      "type": "covers_topic"
+    },
+    {
+      "source": "sakaguchi_2024",
+      "target": "f_seq",
+      "type": "covers_topic"
+    },
+    {
+      "source": "bjorkegren_2026",
+      "target": "m_sc",
+      "type": "covers_topic"
+    },
+    {
+      "source": "bjorkegren_2026",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kenny_2024",
+      "target": "m_dp",
+      "type": "covers_topic"
+    },
+    {
+      "source": "kenny_2024",
+      "target": "f_trust",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chetty_friedman_2019",
+      "target": "m_dp",
+      "type": "covers_topic"
+    },
+    {
+      "source": "chetty_friedman_2019",
+      "target": "f_trust",
+      "type": "covers_topic"
+    },
+    {
+      "source": "perdomo_2020",
+      "target": "m_perf",
+      "type": "covers_topic"
+    },
+    {
+      "source": "perdomo_2020",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "ebrahimi_franceschetti_2026",
+      "target": "m_audit",
+      "type": "covers_topic"
+    },
+    {
+      "source": "ebrahimi_franceschetti_2026",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "estornell_2023",
+      "target": "m_audit",
+      "type": "covers_topic"
+    },
+    {
+      "source": "estornell_2023",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "angelopoulos_2023",
+      "target": "m_ppi",
+      "type": "covers_topic"
+    },
+    {
+      "source": "angelopoulos_2023",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "battaglia_2024",
+      "target": "m_ppi",
+      "type": "covers_topic"
+    },
+    {
+      "source": "battaglia_2024",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "broska_howes_2026",
+      "target": "m_ppi",
+      "type": "covers_topic"
+    },
+    {
+      "source": "broska_howes_2026",
+      "target": "f_eval",
+      "type": "covers_topic"
+    },
+    {
+      "source": "grinsztajn_2025",
+      "target": "m_tabpfn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "grinsztajn_2025",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "rametta_fuller_2026",
+      "target": "m_tabpfn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "rametta_fuller_2026",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "mourao_2026",
+      "target": "m_tabpfn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "mourao_2026",
+      "target": "m_cpfn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "mourao_2026",
+      "target": "f_sup",
+      "type": "covers_topic"
+    },
+    {
+      "source": "mourao_2026",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "balazadeh_2025",
+      "target": "m_cpfn",
+      "type": "covers_topic"
+    },
+    {
+      "source": "balazadeh_2025",
+      "target": "f_causal",
+      "type": "covers_topic"
+    },
+    {
+      "source": "ludwig_mullainathan_rambachan_2026",
+      "target": "m_llm",
+      "type": "covers_topic"
+    },
+    {
+      "source": "ludwig_mullainathan_rambachan_2026",
+      "target": "f_data",
+      "type": "covers_topic"
+    },
+    {
+      "source": "dutting_2024",
+      "target": "m_dme",
+      "type": "covers_topic"
+    },
+    {
+      "source": "dutting_2024",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "thoma_2026",
+      "target": "m_dme",
+      "type": "covers_topic"
+    },
+    {
+      "source": "thoma_2026",
+      "target": "f_strat",
+      "type": "covers_topic"
+    },
+    {
+      "source": "athey_susan",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "athey_susan",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "athey_susan",
+      "target": "f_uns",
+      "type": "researches"
+    },
+    {
+      "source": "athey_susan",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "athey_susan",
+      "target": "f_gen",
+      "type": "researches"
+    },
+    {
+      "source": "athey_susan",
+      "target": "f_seq",
+      "type": "researches"
+    },
+    {
+      "source": "athey_susan",
+      "target": "athey_imbens_2016",
+      "type": "authored"
+    },
+    {
+      "source": "athey_susan",
+      "target": "wager_athey_2018",
+      "type": "authored"
+    },
+    {
+      "source": "athey_susan",
+      "target": "athey_tibshirani_wager_2019",
+      "type": "authored"
+    },
+    {
+      "source": "athey_susan",
+      "target": "athey_2021_mc",
+      "type": "authored"
+    },
+    {
+      "source": "athey_susan",
+      "target": "athey_wager_2021",
+      "type": "authored"
+    },
+    {
+      "source": "athey_susan",
+      "target": "athey_imbens_metzger_munro_2024",
+      "type": "authored"
+    },
+    {
+      "source": "athey_susan",
+      "target": "hadad_2021",
+      "type": "authored"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "f_seq",
+      "type": "researches"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "wager_athey_2018",
+      "type": "authored"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "athey_tibshirani_wager_2019",
+      "type": "authored"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "nie_wager_2021",
+      "type": "authored"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "athey_wager_2021",
+      "type": "authored"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "yadlowsky_2025",
+      "type": "authored"
+    },
+    {
+      "source": "wager_stefan",
+      "target": "hadad_2021",
+      "type": "authored"
+    },
+    {
+      "source": "imbens_guido",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "imbens_guido",
+      "target": "f_uns",
+      "type": "researches"
+    },
+    {
+      "source": "imbens_guido",
+      "target": "f_gen",
+      "type": "researches"
+    },
+    {
+      "source": "imbens_guido",
+      "target": "athey_imbens_2016",
+      "type": "authored"
+    },
+    {
+      "source": "imbens_guido",
+      "target": "abadie_imbens_2006",
+      "type": "authored"
+    },
+    {
+      "source": "imbens_guido",
+      "target": "athey_2021_mc",
+      "type": "authored"
+    },
+    {
+      "source": "imbens_guido",
+      "target": "athey_imbens_metzger_munro_2024",
+      "type": "authored"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "chernozhukov_2018_dml",
+      "type": "authored"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "belloni_chernozhukov_hansen_2014",
+      "type": "authored"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "belloni_chen_chernozhukov_hansen_2012",
+      "type": "authored"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "chernozhukov_2025_gml",
+      "type": "authored"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "chernozhukov_wuthrich_zhu_2021",
+      "type": "authored"
+    },
+    {
+      "source": "chernozhukov_victor",
+      "target": "chernozhukov_2026_ovb",
+      "type": "authored"
+    },
+    {
+      "source": "hansen_christian",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "hansen_christian",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "hansen_christian",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "hansen_christian",
+      "target": "chernozhukov_2018_dml",
+      "type": "authored"
+    },
+    {
+      "source": "hansen_christian",
+      "target": "belloni_chernozhukov_hansen_2014",
+      "type": "authored"
+    },
+    {
+      "source": "hansen_christian",
+      "target": "belloni_chen_chernozhukov_hansen_2012",
+      "type": "authored"
+    },
+    {
+      "source": "belloni_alexandre",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "belloni_alexandre",
+      "target": "belloni_chernozhukov_hansen_2014",
+      "type": "authored"
+    },
+    {
+      "source": "belloni_alexandre",
+      "target": "belloni_chen_chernozhukov_hansen_2012",
+      "type": "authored"
+    },
+    {
+      "source": "duflo_esther",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "duflo_esther",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "duflo_esther",
+      "target": "chernozhukov_2018_dml",
+      "type": "authored"
+    },
+    {
+      "source": "duflo_esther",
+      "target": "chernozhukov_2025_gml",
+      "type": "authored"
+    },
+    {
+      "source": "demirer_mert",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "demirer_mert",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "demirer_mert",
+      "target": "chernozhukov_2018_dml",
+      "type": "authored"
+    },
+    {
+      "source": "demirer_mert",
+      "target": "chernozhukov_2025_gml",
+      "type": "authored"
+    },
+    {
+      "source": "newey_whitney",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "newey_whitney",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "newey_whitney",
+      "target": "chernozhukov_2018_dml",
+      "type": "authored"
+    },
+    {
+      "source": "newey_whitney",
+      "target": "chernozhukov_2026_ovb",
+      "type": "authored"
+    },
+    {
+      "source": "bonhomme_stephane",
+      "target": "f_uns",
+      "type": "researches"
+    },
+    {
+      "source": "bonhomme_stephane",
+      "target": "bonhomme_manresa_2015",
+      "type": "authored"
+    },
+    {
+      "source": "bonhomme_stephane",
+      "target": "bonhomme_lamadon_manresa_2022",
+      "type": "authored"
+    },
+    {
+      "source": "manresa_elena",
+      "target": "f_uns",
+      "type": "researches"
+    },
+    {
+      "source": "manresa_elena",
+      "target": "f_gen",
+      "type": "researches"
+    },
+    {
+      "source": "manresa_elena",
+      "target": "bonhomme_manresa_2015",
+      "type": "authored"
+    },
+    {
+      "source": "manresa_elena",
+      "target": "bonhomme_lamadon_manresa_2022",
+      "type": "authored"
+    },
+    {
+      "source": "manresa_elena",
+      "target": "kaji_manresa_pouliot_2023",
+      "type": "authored"
+    },
+    {
+      "source": "kleinberg_jon",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "kleinberg_jon",
+      "target": "f_trust",
+      "type": "researches"
+    },
+    {
+      "source": "kleinberg_jon",
+      "target": "kleinberg_2018",
+      "type": "authored"
+    },
+    {
+      "source": "kleinberg_jon",
+      "target": "rambachan_2020",
+      "type": "authored"
+    },
+    {
+      "source": "ludwig_jens",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "ludwig_jens",
+      "target": "f_trust",
+      "type": "researches"
+    },
+    {
+      "source": "ludwig_jens",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "ludwig_jens",
+      "target": "f_data",
+      "type": "researches"
+    },
+    {
+      "source": "ludwig_jens",
+      "target": "kleinberg_2018",
+      "type": "authored"
+    },
+    {
+      "source": "ludwig_jens",
+      "target": "rambachan_2020",
+      "type": "authored"
+    },
+    {
+      "source": "ludwig_jens",
+      "target": "ludwig_mullainathan_2024",
+      "type": "authored"
+    },
+    {
+      "source": "ludwig_jens",
+      "target": "ludwig_mullainathan_rambachan_2026",
+      "type": "authored"
+    },
+    {
+      "source": "mullainathan_sendhil",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "mullainathan_sendhil",
+      "target": "f_trust",
+      "type": "researches"
+    },
+    {
+      "source": "mullainathan_sendhil",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "mullainathan_sendhil",
+      "target": "f_data",
+      "type": "researches"
+    },
+    {
+      "source": "mullainathan_sendhil",
+      "target": "kleinberg_2018",
+      "type": "authored"
+    },
+    {
+      "source": "mullainathan_sendhil",
+      "target": "rambachan_2020",
+      "type": "authored"
+    },
+    {
+      "source": "mullainathan_sendhil",
+      "target": "ludwig_mullainathan_2024",
+      "type": "authored"
+    },
+    {
+      "source": "mullainathan_sendhil",
+      "target": "ludwig_mullainathan_rambachan_2026",
+      "type": "authored"
+    },
+    {
+      "source": "rambachan_ashesh",
+      "target": "f_trust",
+      "type": "researches"
+    },
+    {
+      "source": "rambachan_ashesh",
+      "target": "f_data",
+      "type": "researches"
+    },
+    {
+      "source": "rambachan_ashesh",
+      "target": "rambachan_2020",
+      "type": "authored"
+    },
+    {
+      "source": "rambachan_ashesh",
+      "target": "ludwig_mullainathan_rambachan_2026",
+      "type": "authored"
+    },
+    {
+      "source": "taddy_matt",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "taddy_matt",
+      "target": "f_data",
+      "type": "researches"
+    },
+    {
+      "source": "taddy_matt",
+      "target": "f_causal",
+      "type": "researches"
+    },
+    {
+      "source": "taddy_matt",
+      "target": "gentzkow_kelly_taddy_2019",
+      "type": "authored"
+    },
+    {
+      "source": "taddy_matt",
+      "target": "hartford_2017",
+      "type": "authored"
+    },
+    {
+      "source": "taddy_matt",
+      "target": "kozlowski_taddy_evans_2019",
+      "type": "authored"
+    },
+    {
+      "source": "hardt_moritz",
+      "target": "f_strat",
+      "type": "researches"
+    },
+    {
+      "source": "hardt_moritz",
+      "target": "hardt_2016",
+      "type": "authored"
+    },
+    {
+      "source": "hardt_moritz",
+      "target": "perdomo_2020",
+      "type": "authored"
+    },
+    {
+      "source": "zrnic_tijana",
+      "target": "f_strat",
+      "type": "researches"
+    },
+    {
+      "source": "zrnic_tijana",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "zrnic_tijana",
+      "target": "perdomo_2020",
+      "type": "authored"
+    },
+    {
+      "source": "zrnic_tijana",
+      "target": "angelopoulos_2023",
+      "type": "authored"
+    },
+    {
+      "source": "sakaguchi_shosei",
+      "target": "f_seq",
+      "type": "researches"
+    },
+    {
+      "source": "sakaguchi_shosei",
+      "target": "sakaguchi_2025",
+      "type": "authored"
+    },
+    {
+      "source": "sakaguchi_shosei",
+      "target": "sakaguchi_2024",
+      "type": "authored"
+    },
+    {
+      "source": "parkes_david",
+      "target": "f_strat",
+      "type": "researches"
+    },
+    {
+      "source": "parkes_david",
+      "target": "zheng_2022_aieconomist",
+      "type": "authored"
+    },
+    {
+      "source": "parkes_david",
+      "target": "dutting_2024",
+      "type": "authored"
+    },
+    {
+      "source": "christensen_timothy",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "christensen_timothy",
+      "target": "christensen_goncalves_perron_2026",
+      "type": "authored"
+    },
+    {
+      "source": "christensen_timothy",
+      "target": "battaglia_2024",
+      "type": "authored"
+    },
+    {
+      "source": "hansen_stephen",
+      "target": "f_data",
+      "type": "researches"
+    },
+    {
+      "source": "hansen_stephen",
+      "target": "f_eval",
+      "type": "researches"
+    },
+    {
+      "source": "hansen_stephen",
+      "target": "hansen_mcmahon_prat_2018",
+      "type": "authored"
+    },
+    {
+      "source": "hansen_stephen",
+      "target": "battaglia_2024",
+      "type": "authored"
+    },
+    {
+      "source": "hutter_frank",
+      "target": "f_sup",
+      "type": "researches"
+    },
+    {
+      "source": "hutter_frank",
+      "target": "hollmann_2025",
+      "type": "authored"
+    },
+    {
+      "source": "hutter_frank",
+      "target": "grinsztajn_2025",
+      "type": "authored"
+    }
+  ]
+}
