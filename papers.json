@@ -10,10 +10,10 @@
       "added": "2026-03-10",
       "link": "https://doi.org/10.1093/qje/qjx028",
       "takeaways": [
-        "Correspondence experiment: ~15,000 fictitious online applications to employers in New Jersey and New York City, before and after Ban-the-Box adoption, randomising distinctly Black vs distinctly white names and felony conviction status.",
-        "Criminal records are a real barrier — employers who asked about them were 63% more likely to call back an applicant with no record.",
-        "But removing the box widened the racial gap sharply: at those employers the white-over-Black callback advantage went from 7% to 43%.",
-        "The authors read this as employers substituting exaggerated beliefs about racial differences in conviction rates for the information they no longer have."
+        "The authors sent about 15,000 fake online job applications to employers in New Jersey and New York City, before and after Ban-the-Box laws. They randomly varied whether the name sounded Black or white and whether the applicant had a felony record.",
+        "Criminal records do hold people back. Employers who asked about records were 63% more likely to call back applicants without one.",
+        "But removing the question made the racial gap much bigger. At those employers, white applicants' callback advantage over Black applicants rose from 7% to 43%.",
+        "The authors' explanation: without record information, employers fall back on exaggerated beliefs about racial differences in conviction rates."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 2 — discrimination in hiring."
@@ -28,11 +28,11 @@
       "added": "2026-03-13",
       "link": "",
       "takeaways": [
-        "Administrative data linking employment careers, criminal records and welfare registries for the universe of male workers in Brazil, 2009–2017.",
-        "Displacement by mass layoff raises the probability of committing a crime by 23% on average, and by slightly less for cohabiting sons.",
-        "Causal forests: the effect is driven entirely by young and low-tenure workers, with no heterogeneity by education or income.",
-        "Regression discontinuity on benefit eligibility: unemployment insurance completely offsets the crime increase — and the offset vanishes the moment benefits expire.",
-        "That timing is what licenses the liquidity-constraint and psychological-stress reading over leisure substitution."
+        "The data link job histories, criminal records, and welfare records for every male worker in Brazil from 2009 to 2017.",
+        "Losing a job in a mass layoff raises the chance of committing a crime by 23% on average. The effect is slightly smaller for sons living in the same household.",
+        "Using causal forests (a machine-learning method), the authors find the effect comes entirely from young workers and those with short job tenure. Education and income make no difference.",
+        "Comparing workers just above and below the cutoff for unemployment benefits shows that benefits fully cancel out the rise in crime. The rise returns as soon as benefits run out.",
+        "That timing points to money shortages and stress as the cause, not extra free time."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 2 — job loss and crime."
@@ -47,10 +47,10 @@
       "added": "2026-03-17",
       "link": "https://doi.org/10.1257/aer.20181289",
       "takeaways": [
-        "A 1994 law change assigned rent control quasi-experimentally in San Francisco; individual migration data lets them follow both tenants and landlords.",
-        "Rent control cut renter mobility by 20% and reduced displacement from the city — it worked for the people already holding a lease.",
-        "Treated landlords cut rental supply by 15%, selling to owner-occupants and redeveloping buildings.",
-        "The lost supply then pushed market rents up city-wide, so the policy plausibly undermined its own goal for everyone not already inside it — a partial-equilibrium win that becomes a general-equilibrium loss."
+        "A 1994 law put some San Francisco rentals under rent control but not others, creating a natural experiment. Data on where people moved let the authors follow both tenants and landlords.",
+        "Covered tenants were 20% less likely to move, and fewer were pushed out of the city. The policy helped people who already had a lease.",
+        "Landlords of covered buildings cut their rental units by 15%, by selling to owner-occupiers or redeveloping.",
+        "With fewer rentals on the market, rents rose across the city. The policy likely helped current tenants but hurt future renters."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 3 — housing: rent control."
@@ -65,11 +65,11 @@
       "added": "2026-03-20",
       "link": "https://doi.org/10.1257/aer.20200002",
       "takeaways": [
-        "Takes the moving-to-opportunity logic and asks what happens when the move is large enough that the destination reacts.",
-        "Racial composition shocks during the Great Migration (1940–1970) reduced the gains from growing up in the northern US for Black families.",
-        "Explains 27% of the region's racial upward-mobility gap today.",
-        "Shift-share identification: pre-1940 Black migrants' location choices interacted with predicted southern county out-migration.",
-        "The mechanism is locational rather than negative selection of families; persistent segregation and increased crime and policing are the proposed channels."
+        "Moving to a better place can help children. This paper asks what happens when so many people move that the destination itself changes.",
+        "Shifts in the racial makeup of northern US cities during the Great Migration (1940 to 1970) reduced the benefits of growing up there for Black families.",
+        "This explains 27% of the region's racial gap in upward mobility today.",
+        "To isolate the effect, the authors predict where migrants went from where earlier Black migrants (before 1940) had settled and how many people were expected to leave each southern county.",
+        "The cause is the places, not the kind of families who moved. The proposed channels are lasting segregation and more crime and policing."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 3 — housing: moving to opportunity."
@@ -84,10 +84,10 @@
       "added": "2026-03-24",
       "link": "https://doi.org/10.1093/restud/rdx020",
       "takeaways": [
-        "Maastricht restricted access to licensed cannabis shops by nationality — about as close to random assignment of legal cannabis access as policy gets.",
-        "Difference-in-differences on administrative course grades of Maastricht University students, before and during the partial prohibition.",
-        "Students who lost legal access performed substantially better; gains concentrated among younger students, and stronger for women and low performers.",
-        "Effects are larger in courses requiring numerical and mathematical skills, and course evaluations point to improved understanding of the material rather than more study effort — which is what makes the cognitive-functioning story credible rather than mere time reallocation."
+        "Maastricht banned some nationalities from its licensed cannabis shops. This is about as close to randomly assigning legal cannabis access as policy gets.",
+        "The authors compare course grades of Maastricht University students who lost access with those who did not, before and during the ban.",
+        "Students who lost legal access did much better. Gains were largest for younger students, and stronger for women and low performers.",
+        "Gains were bigger in math-heavy courses, and students reported understanding the material better rather than studying more. That suggests cannabis affects how well students think, not just how they spend their time."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 4 — drug policy. Marie is one of the course lecturers."
@@ -102,11 +102,11 @@
       "added": "2026-03-27",
       "link": "",
       "takeaways": [
-        "Separates two things the literature had tended to bundle: access to the contraceptive pill versus access to abortion.",
-        "Trends in sexual behaviour are consistent with the pill fuelling the sexual revolution.",
-        "But neither those trends nor the difference-in-differences estimates support the pill driving the change in family formation.",
-        "What holds up is abortion: liberalized access is what let large numbers of women delay marriage and motherhood.",
-        "A useful case of a well-known result surviving as a story about behaviour while failing as a story about the policy lever everyone had credited."
+        "Earlier research often lumped together two policies: access to the birth control pill and access to abortion. This paper separates them.",
+        "Changes in sexual behavior fit the idea that the pill drove the sexual revolution.",
+        "But neither those trends nor the main estimates show the pill changing when women married or had children.",
+        "Abortion access is what holds up. It let many women delay marriage and motherhood.",
+        "A good example of a famous finding that holds up for behavior but had credited the wrong policy."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 4 — access to birth control. This is the paper Jun Lim and I presented."
@@ -121,11 +121,11 @@
       "added": "2026-03-31",
       "link": "https://doi.org/10.1162/rest_a_01284",
       "takeaways": [
-        "Dutch microdata with a direct measure of automation expenditure — an actual bookkeeping entry for spending on third-party automation services — across all private nonfinancial firms, rather than proxying automation with robot imports or electricity usage.",
-        "The design turns on lumpiness: automation spending arrives in discrete spikes, and those spikes define automation events for a difference-in-differences event study.",
-        "Automating raises the probability that incumbent workers separate from the firm.",
-        "Displaced workers lose 9% of one year's earnings cumulatively over five years, driven by days not worked; losses are larger at smaller firms and for older and middle-educated workers.",
-        "Investment in computers produces no such losses — the comparison that makes the automation result mean something specific."
+        "Dutch data record how much each private firm actually spends on outside automation services. Earlier studies had to guess automation from robot imports or electricity use.",
+        "Automation spending comes in sudden spikes. The authors treat each spike as the moment a firm automates and compare workers before and after.",
+        "After a firm automates, its existing workers are more likely to leave.",
+        "Workers who leave lose 9% of one year's earnings in total over five years, mostly from days without work. Losses are bigger at smaller firms and for older and middle-educated workers.",
+        "Spending on computers causes no such losses, which shows the result is about automation specifically."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 5 — automation: winners and losers."
@@ -140,11 +140,11 @@
       "added": "2026-04-02",
       "link": "https://doi.org/10.1257/aer.20181779",
       "takeaways": [
-        "A reform gave European cross-border workers free access to the Swiss labour market and bit harder in regions close to the border, which supplies the variation.",
-        "Foreign employment rose substantially.",
-        "Even though the incoming cross-border workers were themselves highly educated, wages of highly educated natives went up.",
-        "The mechanism is a simultaneous demand shift: the reform increased the size, productivity and innovation of skill-intensive incumbent firms and attracted new firms, opening managerial positions for natives.",
-        "Effects are concentrated in firms that reported skill shortages before the reform, which is what makes the demand story more than a rationalisation."
+        "A reform let European cross-border workers work freely in Switzerland. It mattered more in regions near the border, which lets the authors compare regions.",
+        "Foreign employment rose a lot.",
+        "Although the new cross-border workers were highly educated, wages of highly educated native workers went up.",
+        "The reason is that demand for skills rose at the same time. Skill-intensive firms grew and became more productive and innovative, and new firms arrived, opening manager jobs for natives.",
+        "The effects were concentrated in firms that reported skill shortages before the reform, which supports this explanation."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 5 — migration and the labour market."
@@ -159,11 +159,11 @@
       "added": "2026-04-10",
       "link": "https://www.nber.org/papers/w29874",
       "takeaways": [
-        "Managers with a business degree reduce their employees' wages: within five years of appointment, wages fall 6% and the labor share 5 percentage points in the US, and 3% and 3 points in Denmark.",
-        "Firms appointing them are not on differential trends and enjoy no higher output, investment or employment growth in return — so this is not a story about business managers running leaner, more productive firms.",
-        "Identification stacks manager retirements and deaths with an IV from the diffusion of the practice within industry-region-size cells.",
-        "Exogenous export demand shocks show non-business managers share profits with workers while business managers do not.",
-        "Role-model influence on college major choice instruments the decision to enrol in a business degree in Denmark — separating practices and values acquired in business school from selection into it."
+        "Managers with a business degree lower their workers' pay. Within five years, wages fall 6% and workers' share of firm income falls 5 percentage points in the US. In Denmark, the drops are 3% and 3 points.",
+        "Firms that hire these managers were not already on different paths, and they gain no extra output, investment, or jobs. So business managers are not simply running leaner, more productive firms.",
+        "To show cause and effect, the authors use manager retirements and deaths, plus how the hiring practice spread within industries, regions, and firm sizes.",
+        "When export demand rises for reasons outside the firm, managers without a business degree share the gains with workers. Business-degree managers do not.",
+        "In Denmark, role models who shape what students choose to study help separate what business school teaches from the kind of people who choose it."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 6 — managers and rent sharing. The syllabus cites this as Acemoglu et al. (2025), but as of September 2026 it is still unpublished: le Maire's homepage lists it under working papers, conditionally accepted at the American Economic Review. Cite the NBER working paper until that lands."
@@ -178,10 +178,10 @@
       "added": "2026-04-14",
       "link": "https://doi.org/10.1093/jeea/jvaa045",
       "takeaways": [
-        "Anti-refugee sentiment on Facebook predicts crimes against refugees — but only in otherwise similar German municipalities with higher social media usage. The interaction is the whole design: sentiment alone is not the treatment, sentiment times the ability to propagate it is.",
-        "Causality comes from exogenous variation in the timing of major Facebook and internet outages.",
-        "Consistent with echo chambers, right-wing social media posts carry narrower and more loaded content than news reports.",
-        "The claim is that social media acts as a propagation mechanism for violent crime by spreading extreme viewpoints — not that it creates the sentiment."
+        "Anti-refugee posts on Facebook predict attacks on refugees, but only in German towns where more people use social media. What matters is not the sentiment alone but how widely it can spread.",
+        "To show cause and effect, the authors use major Facebook and internet outages that happen for unrelated reasons.",
+        "Right-wing social media posts cover a narrower range of topics and use more loaded language than news reports, consistent with echo chambers.",
+        "The claim is that social media spreads extreme views and so fuels violent crime. It does not create the hostility in the first place."
       ],
       "comments": "",
       "source": "Seminar Economics of the Public Sector (FEB13065), Week 7 — hate speech and violence."
