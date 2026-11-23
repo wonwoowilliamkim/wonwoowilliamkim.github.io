@@ -28,13 +28,6 @@
   <h2 class="page-title">Paper Archive</h2>
   <hr class="page-divider">
 
-  <p class="hub-intro">
-    Papers I came across and wanted to keep, with whatever I thought at the time.
-    Click an entry to open the note. Search runs over the notes too, so a method
-    name like <em>difference-in-differences</em> or <em>event study</em> will find
-    the papers that used it.
-  </p>
-
   <div class="archive-controls">
     <input
       class="archive-search"
@@ -83,7 +76,7 @@
 //   takeaways string[] one entry per bullet under "Key takeaways"
 //   comments  string   my own take, under "My comments"; "" hides the whole
 //                      section, and "\n" splits it into paragraphs
-//   source    string   optional provenance line, shown small at the bottom
+//   source    string   optional provenance note; kept in the data, not shown
 //
 // Everything from the file lands on the page through textContent, so a stray
 // angle bracket in a note is text, not markup.
@@ -143,7 +136,7 @@
   // Search covers the takeaways and comments, not just the bibliographic line —
   // that is how a method name ("difference-in-differences") finds its papers.
   function haystack(p) {
-    return [p.title, p.authors, p.venue, p.year, p.field, p.comments, p.source]
+    return [p.title, p.authors, p.venue, p.year, p.field, p.comments]
       .concat(p.takeaways || [])
       .join(" ")
       .toLowerCase();
@@ -248,13 +241,6 @@
         para.textContent = paragraph;
         body.appendChild(para);
       });
-    }
-
-    if (p.source) {
-      var source = document.createElement("p");
-      source.className = "archive-source";
-      source.textContent = p.source;
-      body.appendChild(source);
     }
 
     var href = safeUrl(p.link);
