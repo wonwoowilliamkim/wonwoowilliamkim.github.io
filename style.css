@@ -31,7 +31,7 @@
   --accent: #8fb3e0;
   --accent-light: #22303f;
   --border: #33353a;
-  --text-2: #d4d2cc;
+  --text-2: #e6e4df;
   --text-3: #bcbab3;
   --on-accent: #10151c;
   --tag-wip-bg: #3a2a14;
@@ -302,6 +302,7 @@ h1 {
 
 .paper-item { padding: 1rem 0; border-bottom: 1px solid var(--border); }
 .paper-item:first-child { padding-top: 0; }
+.paper-item:last-child { padding-bottom: 0; border-bottom: none; }
 
 .paper-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; line-height: 1.4; color: var(--text); margin-bottom: 0.35rem; }
 .paper-meta { font-family: var(--sans); font-size: 0.82rem; line-height: 1.5; color: var(--muted); margin-bottom: 0.4rem; }
@@ -344,8 +345,9 @@ h1 {
 
 .field-tag {
   font-family: var(--sans);
-  font-size: 0.82rem;
-  padding: 0.35rem 0.8rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  padding: 0.22rem 0.7rem;
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--muted);
