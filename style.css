@@ -300,12 +300,12 @@ h1 {
 
 .paper-list { list-style: none; }
 
-.paper-item { padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
+.paper-item { padding: 1rem 0; border-bottom: 1px solid var(--border); }
 .paper-item:first-child { padding-top: 0; }
 
-.paper-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; color: var(--text); margin-bottom: 0.25rem; }
-.paper-meta { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); margin-bottom: 0.5rem; }
-.paper-abstract { font-size: 0.93rem; color: var(--text-3); line-height: 1.65; }
+.paper-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; line-height: 1.4; color: var(--text); margin-bottom: 0.35rem; }
+.paper-meta { font-family: var(--sans); font-size: 0.82rem; line-height: 1.5; color: var(--muted); margin-bottom: 0.4rem; }
+.paper-abstract { font-size: 0.92rem; color: var(--text-3); line-height: 1.55; }
 
 .paper-tag {
   display: inline-block;
@@ -322,7 +322,13 @@ h1 {
 .tag-wip { background: var(--tag-wip-bg); color: var(--tag-wip-fg); }
 .tag-progress { background: var(--tag-progress-bg); color: var(--tag-progress-fg); }
 
-.research-fields { margin-top: 2.5rem; }
+/* Label and field tags share one row */
+.research-fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.2rem;
+}
 
 .research-fields h3 {
   font-family: var(--sans);
@@ -331,7 +337,7 @@ h1 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .field-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
