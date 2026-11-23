@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects — Wonwoo (William) Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
 
@@ -59,11 +60,6 @@
         with D3. Papers, researchers, and policy areas become nodes you can pull
         apart and click through.
       </p>
-
-      <div class="hub-meta">
-        <span>2 maps · behavioral public econ, Korea policy</span>
-        <svg class="hub-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
     </a>
 
     <!-- ── Right door: the reading log ── -->
@@ -88,12 +84,6 @@
         what the design was, what I would steal, and what still bothers me.
         Searchable, and filterable by field.
       </p>
-
-      <div class="hub-meta">
-        <!-- Replaced with a live count on load; this text is the fallback. -->
-        <span data-paper-count>Notes on papers worth keeping</span>
-        <svg class="hub-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
     </a>
 
     <!-- ── Wide door: data collection and notes ── -->
@@ -115,36 +105,10 @@
         Notes and charts built from public data I have collected and cleaned.
         Replication packages and further notes will be added over time.
       </p>
-
-      <div class="hub-meta">
-        <span>1 note · AI usage</span>
-        <svg class="hub-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
     </a>
 
   </div>
 </main>
-
-<script>
-// Show how many papers are actually in the archive, read from the same file the
-// archive page renders. Same-origin, no build step, and the markup already says
-// something sensible — so a failed fetch just leaves the fallback text in place.
-(function () {
-  var el = document.querySelector("[data-paper-count]");
-  if (!el) return;
-
-  fetch("papers.json", { cache: "no-store" })
-    .then(function (res) {
-      if (!res.ok) throw new Error(res.status);
-      return res.json();
-    })
-    .then(function (data) {
-      var n = (data.papers || []).length;
-      el.textContent = n + (n === 1 ? " paper logged" : " papers logged");
-    })
-    .catch(function () { /* keep the fallback */ });
-})();
-</script>
 
 </body>
 </html>
